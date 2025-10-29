@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smoot;
+    font-family: 'poppins' ,sans-serif;
+    text-decoration: none;
+    
+}
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: blue;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+nav a{
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    transition: .3s;
+    color: whitesmoke;
+}
+
+nav a:hover{
+    text-decoration: underline !important;
+}
+html{
+ font-size: 62.5%;
+ /* overflow: hidden; */
+}
+@media (min-width: 480px) {
+    body{
+        font-size: 18px;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    body{
+        font-size: 18px;
+    }
+    
+}
+@media (min-width: 1024px){
+    body{
+        font-size: 20px;
+    }
+    
+}
+
+body{
+    height: 100vh;
+}
+.logo{
+    font-size: 25px;
+    font-weight: 700;
+    cursor: default;
+    color:whitesmoke;
+}
+.accueil{
+    display: flex;
+    padding: 4%;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil-content{
+    width: 60%;
+}
+.accueil-content h3{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.accueil-content h1{
+font-size: 5.6rem;
+font-weight: 700;
+line-height: 1.3;
+}
+
+.img-accueil{
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 255, 0.603);
+}
+.img-accueil img{
+   width: 300px;
+   height: 250px;
+   object-fit: cover;
+   object-position: 0  ;
+    border-radius: 50%;
+    display: block;
+
+}
+   
+.accueil-content p{
+    font-size: 1.6rem ;
+}
+.reseaux-sociaux a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 3rem 1.5rem 3rem 0;
+    border: .2rem solid #000;
+    transition: .5s ease;
+
+
+}
+.reseaux-sociaux a:hover{
+    box-shadow: 0 0 1rem #000;
+}
+    
+.cv{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    background-color: blue;
+    color: whitesmoke;
+}
+.Aproposde{
+    
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.propos{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.Aproposde-content h2{
+    text-align: center;
+    line-height: 1.2em;
+}
+.Aproposde-content p{
+    font-size: 1.6rem;
+    margin: 2rem auto;
+    width: 50%;
+    line-height: 32px;
+    height: 300px;
+
+
+}
+.env{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    background-color: blue;
+    color: whitesmoke;
+}
+
+#h2{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.form-example{
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.menu{
+    display: flex;
+    gap: 20px;
+}
+
+.Modou{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#message{
+    height: 120px;
+    color: blue;
+    resize: none;
+    border: 1px solid blue;
+}
+
+#Modou{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    /* background-color: maroon; */
+    color: blue;
+    border: 1px solid blue;
+}
+
+.reseaux-sociaux{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer{
+    background-color: blue;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+footer p{
+    font-size: 18px;
+    color: whitesmoke;
+}
+span{
+    color: blue;
+}
+.comp{
+    text-align: center;
+    
+    font-size: 4.5rem;
+}e
+.proj{
+    text-align: center;
+    
+    font-size: 4.5rem; 
+}
+section{
+    background-color: whitesmoke;
+}
+
+.left-right{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.left,.right{
+    flex: 1;
+}
+
+.left,.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left h3,.right h3{
+    text-decoration: underline;
+}
+.competence-content{
+    height: 80vh;
+    padding: 2%;
+}
+
+.range{
+    width: 400px;
+    height: 8px;
+    border: 1px solid #000;
+}
+
+#html{
+    width: 95%;
+    background-color: blue;
+    height: 100%;
+}
+
+#css{
+    width: 50%;
+    background-color: blue;
+    height: 100%;
+}
+
+#c{
+    width: 50%;
+    background-color: blue;
+    height: 100%;
+}
+
+
+#js{
+    width: 30%;
+    background-color: blue;
+    height: 100%;
+}
+
+#PowerPoint{
+    width: 80%;
+    background-color: blue;
+    height: 100%;
+}
+
+#Word{
+    width: 85%;
+    background-color: blue;
+    height: 100%;
+}
+
+#Excel{
+    width: 50%;
+    background-color: blue;
+    height: 100%;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.projet-content{
+    padding: 5%;
+    display: flex;
+    height: 75vh;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#pp{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.blog{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid blue;
+}
+
+.blog h3{
+    font-size: 20px;
+}
+
+.blog p{
+    text-align: center;
+    font-size: 16px;
+}
+.mame{
+    color: blue;
+}
