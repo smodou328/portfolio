@@ -1,77 +1,882 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title> 
-    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="Portfolio de Serigne Modou Lo – Étudiant en Licence 3 Génie Logiciel à l'Université Iba Der Thiam de Thiès & Développeur Web / Logiciel.">
+    <title>Serigne Modou Lo | Portfolio - Génie Logiciel & Web</title>
+    <!-- Google Fonts & Boxicons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="header">  
-        <!--
-        <a href="#" class="logo">PORTFOLIO</a>
-        <nav class="nav">
-            <a href="#">Accueil</a>
-            <a href="./Aproposde.html">A propos de moi</a>
-            <a href="./Competence.html">Competences</a>
-            <a href="./Projet.html">Projets</a>
-            <a href="./Contact.html">Contact</a>
-         </nav> -->
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Accueil</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./Aproposde.html">A propos de moi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./Competence.html">Competences</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./Projet.html">Projets</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./Contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- Header & Navigation Exact Format AliouDev221 (Floating Pill Navbar) -->
+    <header class="aliou-header">
+        <div class="nav-pill-container">
+            <!-- Brand Logo -->
+            <a href="#accueil" class="nav-brand">
+                <div class="brand-avatar-wrap">
+                    <img src="./logo-icon.png" alt="SerigneDev221" class="brand-avatar">
+                </div>
+                <span class="brand-text">SerigneDev<span class="brand-suffix">221</span></span>
+            </a>
 
-    </header>  
- <section class="accueil"> 
-    <div class="accueil-content">
-        <h3><span>Salut</span>,C'est </h3> 
-        <h1>Serigne Modou Lo</h1>
-        <h3>Et Je suis,<span>Etudiant en informatique</span></h3>
-        <p>Passionnée par la programmation et les technologies de pointe.Ce site est un aperçu de mes compétences,projets réalisés et de ma progression dans le domaine de l'informatique.</p>
-        <div class="reseaux-sociaux">
-           <a href="#"><box-icon type='logo' name='whatsapp'></box-icon></a>
-           <a href="#"><box-icon type='logo' name='twitter'></box-icon></a>
-           <a href="#"><box-icon type='logo' name='linkedin'></box-icon></a>
-           <a href="#"><box-icon type='logo' name='instagram'></box-icon></a>
+            <!-- Center Nav Links -->
+            <nav class="nav-links-wrap">
+                <a href="#accueil" class="nav-pill-link active">Accueil</a>
+                <a href="#apropos" class="nav-pill-link">À propos</a>
+                <a href="#competences" class="nav-pill-link">Compétences</a>
+                <a href="#services" class="nav-pill-link">Services</a>
+                <a href="#projets" class="nav-pill-link">Projets</a>
+                <a href="#formations" class="nav-pill-link">Formations</a>
+                <a href="#contact" class="nav-pill-link">Contact</a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="nav-right-actions">
+                <button class="nav-mobile-btn" id="mobileToggle" aria-label="Ouvrir le menu">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
         </div>
-        <a href="./cv.html" class="cv">Télécharger CV</a>
-    </div>
-    
-       <div class="img-accueil">
-           <img src="./lo.jpg" alt="">
-       </div>
-  </section>
-       <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-        <footer>
-            <p>&copy; 2025 Serigne Modou Lo | Tous droits reservés</p>
-        </footer>
+        <!-- Mobile Dropdown Menu Card (Exact Format AliouDev) -->
+        <div class="mobile-menu-card" id="mobileMenu">
+            <a href="#accueil" class="mobile-item active">Accueil</a>
+            <a href="#apropos" class="mobile-item">À propos</a>
+            <a href="#competences" class="mobile-item">Compétences</a>
+            <a href="#services" class="mobile-item">Services</a>
+            <a href="#projets" class="mobile-item">Projets</a>
+            <a href="#formations" class="mobile-item">Formations</a>
+            <a href="#contact" class="mobile-item">Contact</a>
+        </div>
+    </header>
 
+    <!-- 1. Hero Section (#accueil) -->
+    <section class="hero-section" id="accueil">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <h3>Salut, je suis</h3>
+                    <h1>Serigne Modou Lo</h1>
+                    <div class="hero-role">
+                        <i class='bx bx-code-block'></i> Étudiant en Licence 3 Génie Logiciel & Développeur Web
+                    </div>
+                    <p class="hero-desc">
+                        Étudiant à l'<strong>Université Iba Der Thiam de Thiès</strong> et ancien stagiaire développeur web chez <strong>Écoles au Sénégal</strong>. Passionné par Laravel, React, Django, Python et la conception de solutions logicielles scalables et innovantes.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="./cv.html" class="btn btn-primary">
+                            <i class='bx bx-download'></i> Télécharger mon CV
+                        </a>
+                        <a href="#projets" class="btn btn-secondary">
+                            <i class='bx bx-folder-open'></i> Mes Projets
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class='bx bx-send'></i> Contactez-moi
+                        </a>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="social-links">
+                        <a href="https://wa.me/221763287964" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
+                        <a href="mailto:lo065657@gmail.com" class="social-btn" title="Envoyer un email">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/smodou328" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Photo -->
+                <div class="hero-visual">
+                    <div class="hero-avatar-wrap">
+                        <div class="hero-avatar-glow"></div>
+                        <img src="./profile.jpg" alt="Portrait de Serigne Modou Lo" class="hero-avatar-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Banner Bar (Format AliouDev) -->
+            <div class="hero-stats-bar">
+                <div class="stat-box">
+                    <span class="stat-number">+3</span>
+                    <span class="stat-label">Années d'Études en Génie Logiciel</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">+10</span>
+                    <span class="stat-label">Projets & Applications Conçus</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Passion, Rigueur & Autonomie</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Section À Propos (#apropos) -->
+    <section class="section-padding section-bg-alt" id="apropos">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Qui Suis-Je ?</div>
+                <h2 class="section-title">À Propos de <span class="text-blue">Moi</span></h2>
+                <p class="section-subtitle">
+                    Découvrez mon parcours, mes compétences forgées à l'Université Iba Der Thiam de Thiès et mon expérience de terrain.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Left Column: Profile Card -->
+                <aside class="profile-card">
+                    <img src="./profile.jpg" alt="Photo de Serigne Modou Lo" class="profile-card-img">
+                    <h3>Serigne Modou Lo</h3>
+                    <p class="title">Licence 3 Génie Logiciel (UIDT)</p>
+
+                    <div class="profile-info-list">
+                        <div class="profile-info-item">
+                            <i class='bx bxs-graduation'></i>
+                            <span>Université Iba Der Thiam de Thiès</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxs-briefcase'></i>
+                            <span>Ex-Stagiaire chez Écoles au Sénégal</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxs-map'></i>
+                            <span>Touba / Thiès, Sénégal</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxs-envelope'></i>
+                            <span>lo065657@gmail.com</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxs-phone'></i>
+                            <span>+221 76 328 79 64</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxl-linkedin-square'></i>
+                            <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener">LinkedIn : serigne-modou-lo</a>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxl-github'></i>
+                            <a href="https://github.com/smodou328" target="_blank" rel="noopener">GitHub : smodou328</a>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                        <a href="./cv.html" class="btn btn-primary" style="width: 100%;">
+                            <i class='bx bx-file'></i> Consulter mon CV complet
+                        </a>
+                        <a href="https://smodou328.github.io/cv-serigne-modou-lo/" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%;">
+                            <i class='bx bx-link-external'></i> CV sur GitHub Pages
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Right Column: Bio & Highlights -->
+                <div class="about-content-box">
+                    <div class="bio-card">
+                        <h3><i class='bx bx-terminal'></i> Profil Professionnel</h3>
+                        <p>
+                            Étudiant en <strong>troisième année de Licence en Génie Logiciel à l'Université Iba Der Thiam de Thiès</strong>, je suis passionné par le développement logiciel, les technologies web et les bases de données. Sérieux, motivé et autonome, je mets mes compétences en programmation et en conception d'applications au service de projets innovants.
+                        </p>
+                        <p>
+                            Mon stage en tant que <strong>Développeur Web chez Écoles au Sénégal</strong> m'a permis de pratiquer le développement applicatif en équipe : participation au développement de l'application de pointage <strong>Tewna</strong> (Laravel & React), intégration de la nouvelle plateforme <strong>Kaay Jang</strong>, maintenance d'API REST et documentation technique.
+                        </p>
+                        <p>
+                            Mon objectif est de concevoir des solutions fiables et d'excellence technique pour contribuer activement à la transformation digitale et au progrès technologique.
+                        </p>
+                    </div>
+
+                    <!-- Highlight Cards -->
+                    <div class="about-stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class='bx bx-laptop'></i></div>
+                            <h4>Expérience Pratique</h4>
+                            <p>Stage de 3 mois chez <strong>Écoles au Sénégal</strong> : développement de plateformes web, APIs et intégration responsive.</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class='bx bx-code-alt'></i></div>
+                            <h4>Stack Moderne</h4>
+                            <p>Maîtrise de Laravel, React, Django, Python, Java, Langage C, Tailwind CSS, MySQL et SQLite.</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class='bx bx-award'></i></div>
+                            <h4>Certifications Reconnues</h4>
+                            <p>Certifié <strong>Elements of AI</strong> (Univ. Helsinki & MinnaLearn) et <strong>Python Essentials 1</strong> (Cisco Academy).</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class='bx bx-brain'></i></div>
+                            <h4>Esprit d'Analyse</h4>
+                            <p>Rigueur algorithmique, modélisation relationnelle de bases de données et sens du travail bien fait.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Section Compétences (#competences) -->
+    <section class="section-padding" id="competences">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Savoir-Faire</div>
+                <h2 class="section-title">Mes <span class="text-blue">Compétences</span></h2>
+                <p class="section-subtitle">
+                    Aperçu détaillé de mes acquis techniques en développement web, programmation logicielle et bases de données.
+                </p>
+            </div>
+
+            <div class="skills-container">
+                <!-- Category 1: Web & Frameworks -->
+                <div class="skills-category">
+                    <h3 class="category-title"><i class='bx bx-globe'></i> Développement Web & Frameworks</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="95" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSS3 & Flexbox / Grid</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="90" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript (ES6+)</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="80" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Laravel (PHP)</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="85" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React.js</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="75" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Django (Python)</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="75" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Tailwind CSS</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="80" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Programmation & BD -->
+                <div class="skills-category">
+                    <h3 class="category-title"><i class='bx bx-code-alt'></i> Programmation & Bases de Données</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python (Cisco Certified)</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="85" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Java & JavaFX</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="80" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Langage C & Algorithmique</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="80" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">SQL (MySQL & SQLite)</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="85" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-bar" data-percent="80" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Bureautique & Certifications -->
+                <div class="skills-category">
+                    <h3 class="category-title"><i class='bx bx-star'></i> Certifications & Qualités Clés</h3>
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-chip"><i class='bx bx-award'></i> Elements of AI (Univ. Helsinki & MinnaLearn)</div>
+                        <div class="soft-skill-chip"><i class='bx bx-award'></i> Python Essentials 1 (Cisco Networking Academy)</div>
+                        <div class="soft-skill-chip"><i class='bx bx-check-circle'></i> Microsoft Word, Excel, PowerPoint</div>
+                        <div class="soft-skill-chip"><i class='bx bx-check-circle'></i> Esprit d'équipe & Collaboration</div>
+                        <div class="soft-skill-chip"><i class='bx bx-check-circle'></i> Rigueur & Sens du détail</div>
+                        <div class="soft-skill-chip"><i class='bx bx-check-circle'></i> Autonomie & Curiosité technique</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Section Services (#services - Format AliouDev) -->
+    <section class="section-padding section-bg-alt" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Mes Services</div>
+                <h2 class="section-title">Ce Que Je Peux <span class="text-blue">Vous Apporter</span></h2>
+                <p class="section-subtitle">
+                    Mes domaines d'intervention pour concrétiser vos projets informatiques, web et logiciels.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <i class='bx bx-laptop'></i>
+                    </div>
+                    <h3>Développement Web Full-Stack</h3>
+                    <p>
+                        Création d'applications web responsives, rapides et sécurisées avec <strong>Laravel, React, Django et Tailwind CSS</strong>.
+                    </p>
+                    <ul>
+                        <li><i class='bx bx-check'></i> Sites web responsives & dynamiques</li>
+                        <li><i class='bx bx-check'></i> Panneaux d'administration sur-mesure</li>
+                        <li><i class='bx bx-check'></i> Optimisation des performances</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <i class='bx bx-server'></i>
+                    </div>
+                    <h3>Conception & Intégration d'APIs</h3>
+                    <p>
+                        Développement d'APIs RESTful performantes et modulaires pour connecter vos interfaces web et mobiles.
+                    </p>
+                    <ul>
+                        <li><i class='bx bx-check'></i> APIs REST avec Laravel & Django</li>
+                        <li><i class='bx bx-check'></i> Authentification sécurisée (JWT / Sanctum)</li>
+                        <li><i class='bx bx-check'></i> Documentation technique claire</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <i class='bx bx-data'></i>
+                    </div>
+                    <h3>Bases de Données & Modélisation</h3>
+                    <p>
+                        Modélisation relationnelle rigoureuse, création et optimisation de bases de données relationnelles <strong>MySQL et SQLite</strong>.
+                    </p>
+                    <ul>
+                        <li><i class='bx bx-check'></i> Schémas relationnels optimisés</li>
+                        <li><i class='bx bx-check'></i> Requêtes SQL performantes</li>
+                        <li><i class='bx bx-check'></i> Migration et intégrité des données</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <i class='bx bx-file'></i>
+                    </div>
+                    <h3>Bureautique & Automatisation</h3>
+                    <p>
+                        Mise en place de solutions documentaires, tableaux de bord de suivi avec Google Sheets, Apps Script, Excel et PowerPoint.
+                    </p>
+                    <ul>
+                        <li><i class='bx bx-check'></i> Automatisation Google Apps Script</li>
+                        <li><i class='bx bx-check'></i> Tableaux de bord de suivi & calculs</li>
+                        <li><i class='bx bx-check'></i> Rapports & présentations percutantes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Section Projets (#projets) -->
+    <section class="section-padding" id="projets">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Réalisations</div>
+                <h2 class="section-title">Mes <span class="text-blue">Projets</span> Récents</h2>
+                <p class="section-subtitle">
+                    Sélection de réalisations en stage, projets universitaires à l'UIDT et développements personnels.
+                </p>
+            </div>
+
+            <!-- Filtres de projets -->
+            <div class="projects-filter-bar">
+                <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                <button class="filter-btn" data-filter="web">Web & Laravel</button>
+                <button class="filter-btn" data-filter="logiciel">Java & Logiciel</button>
+                <button class="filter-btn" data-filter="academique">Académique</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1: TEWNA -->
+                <article class="project-card" data-category="web">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bx-fingerprint'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">React.js</span>
+                            <span class="project-tag">API REST</span>
+                        </div>
+                        <h3 class="project-title">Application TEWNA — Écoles au Sénégal</h3>
+                        <p class="project-desc">
+                            Développement de <strong>Tewna</strong>, application de pointage et de gestion de présence pour <em>Écoles au Sénégal</em>. Interface utilisateur en React, routes API et persistance avec Laravel.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#contact" class="project-link">
+                                Plus d'informations <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">Stage Professionnel</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: KAAY JANG -->
+                <article class="project-card" data-category="web">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bx-book-open'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Plateforme Éducative</span>
+                            <span class="project-tag">Web</span>
+                            <span class="project-tag">En cours</span>
+                        </div>
+                        <h3 class="project-title">KAAY JANG — Écoles au Sénégal</h3>
+                        <p class="project-desc">
+                            Contribution active à la plateforme éducative constituant la nouvelle version d'Écoles au Sénégal : espaces dédiés pour élèves, professeurs et équipes administratives.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#contact" class="project-link">
+                                Échanger sur ce projet <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: #16a34a;">Projet Actif</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Salles Java -->
+                <article class="project-card" data-category="logiciel">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bxl-java'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">JavaFX</span>
+                            <span class="project-tag">POO</span>
+                        </div>
+                        <h3 class="project-title">Gestion des Salles & Emplois du Temps</h3>
+                        <p class="project-desc">
+                            Application logicielle desktop conçue en Java et JavaFX pour la planification, la réservation des salles de cours et l'organisation des emplois du temps universitaires.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#contact" class="project-link">
+                                Voir détails <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-light);">Projet Universitaire</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Gestion Bibliothèque -->
+                <article class="project-card" data-category="academique">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bx-library'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Google Apps Script</span>
+                            <span class="project-tag">Langage C</span>
+                            <span class="project-tag">Gestion</span>
+                        </div>
+                        <h3 class="project-title">Gestion de Prêts en Bibliothèque</h3>
+                        <p class="project-desc">
+                            Application de gestion des prêts et retours de livres développée avec Google Forms, Google Sheets et Apps Script, combinée à une modélisation en Langage C.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#contact" class="project-link">
+                                En savoir plus <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-light);">Académique</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: CV Interactif & Portfolio -->
+                <article class="project-card" data-category="web">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bx-laptop'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Portfolio Web & CV en Ligne</h3>
+                        <p class="project-desc">
+                            Conception de ce site personnel responsive aux couleurs Bleu & Blanc avec navigation fluide, CV numérique hébergé sur GitHub Pages et version A4 imprimable.
+                        </p>
+                        <div class="project-footer">
+                            <a href="https://smodou328.github.io/cv-serigne-modou-lo/" target="_blank" rel="noopener" class="project-link">
+                                Ouvrir sur GitHub Pages <i class='bx bx-link-external'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">En ligne</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Applications Python & Django -->
+                <article class="project-card" data-category="web">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bxl-python'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <h3 class="project-title">Applications Web Python & Django</h3>
+                        <p class="project-desc">
+                            Projets d'applications web développés dans le cadre de la Licence 3 Génie Logiciel : gestion d'utilisateurs, modèles relationnels et architecture MVC avec Django.
+                        </p>
+                        <div class="project-footer">
+                            <a href="#contact" class="project-link">
+                                Me contacter <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">L3 Génie Logiciel</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Section Formations & Parcours (#formations) -->
+    <section class="section-padding section-bg-alt" id="formations">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Parcours</div>
+                <h2 class="section-title">Formations & <span class="text-blue">Expériences</span></h2>
+                <p class="section-subtitle">
+                    Mon cursus universitaire en Génie Logiciel à l'UIDT de Thiès et mon expérience pratique en entreprise.
+                </p>
+            </div>
+
+            <div class="timeline-grid">
+                <!-- Colonne 1: Expérience Professionnelle -->
+                <div class="timeline-column">
+                    <h3 class="timeline-col-title"><i class='bx bx-briefcase'></i> Expérience Professionnelle</h3>
+                    <div class="timeline-wrap">
+                        <div class="timeline-card">
+                            <span class="timeline-date-badge">10 Août 2026 – 10 Novembre 2026</span>
+                            <h4>Stagiaire Développeur Web</h4>
+                            <div class="institution">Écoles au Sénégal — Dakar / Thiès</div>
+                            <p>
+                                Développement et maintenance d'applications web, intégration d'interfaces utilisateur responsives, développement d'API avec <strong>Laravel & React</strong> (application <em>Tewna</em> et plateforme <em>Kaay Jang</em>), tests et revues de code.
+                            </p>
+                        </div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-date-badge">Projets 2024 – Présent</span>
+                            <h4>Développeur Web Indépendant & Académique</h4>
+                            <div class="institution">Projets Personnels & Collaboratifs</div>
+                            <p>
+                                Réalisation de sites web responsives, portfolios, automatisation Google Apps Script et conception de solutions logicielles en Python et Java.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne 2: Formations Académiques -->
+                <div class="timeline-column">
+                    <h3 class="timeline-col-title"><i class='bx bxs-graduation'></i> Formation Académique</h3>
+                    <div class="timeline-wrap">
+                        <div class="timeline-card">
+                            <span class="timeline-date-badge">2025 – 2026 (En cours)</span>
+                            <h4>Licence 3 Informatique – Génie Logiciel</h4>
+                            <div class="institution">Université Iba Der Thiam de Thiès (UIDT)</div>
+                            <p>
+                                Spécialisation en architectures logicielles, Laravel, Python, Django, modélisation avancée et gestion de bases de données.
+                            </p>
+                        </div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-date-badge">2024 – 2025</span>
+                            <h4>Licence 2 Informatique</h4>
+                            <div class="institution">Université Iba Der Thiam de Thiès (UIDT)</div>
+                            <p>
+                                Programmation orientée objet en <strong>Java</strong>, interfaces <strong>JavaFX</strong>, structures de données et bases de données relationnelles SQL.
+                            </p>
+                        </div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-date-badge">2023 – 2024</span>
+                            <h4>Licence 1 Informatique</h4>
+                            <div class="institution">Université Iba Der Thiam de Thiès (UIDT)</div>
+                            <p>
+                                Fondamentaux de la programmation en <strong>Langage C</strong>, algorithmique structurée, HTML5, CSS3 et JavaScript.
+                            </p>
+                        </div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-date-badge">2023</span>
+                            <h4>Baccalauréat Scientifique (Série S2)</h4>
+                            <div class="institution">Groupe Scolaire Privé GSCAB — Sénégal</div>
+                            <p>
+                                Formation scientifique approfondie en Mathématiques, Sciences Physiques et SVT.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Section Contact (#contact) -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Me Joindre</div>
+                <h2 class="section-title">Contactez<span class="text-blue">-moi</span></h2>
+                <p class="section-subtitle">
+                    Vous avez un projet en tête ou une opportunité à proposer ? Écrivez-moi et discutons-en !
+                </p>
+            </div>
+
+            <div class="contact-layout">
+                <!-- Left: Coordonnées -->
+                <div class="contact-info-col">
+                    <div class="contact-card">
+                        <h3>Coordonnées Directes</h3>
+                        <p class="lead-text">
+                            Disponible pour des projets de développement web, des opportunités de stage ou d'emploi, et des collaborations techniques.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class='bx bx-envelope'></i></div>
+                                <div class="method-details">
+                                    <span class="label">Email</span>
+                                    <a href="mailto:lo065657@gmail.com" class="value">lo065657@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class='bx bx-phone'></i></div>
+                                <div class="method-details">
+                                    <span class="label">Téléphone</span>
+                                    <a href="tel:+221763287964" class="value">+221 76 328 79 64</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class='bx bxl-whatsapp'></i></div>
+                                <div class="method-details">
+                                    <span class="label">WhatsApp Direct</span>
+                                    <a href="https://wa.me/221763287964" target="_blank" rel="noopener noreferrer" class="value">Démarrer une discussion</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class='bx bx-map-pin'></i></div>
+                                <div class="method-details">
+                                    <span class="label">Localisation</span>
+                                    <span class="value">Touba / Thiès, Sénégal</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class='bx bxl-linkedin'></i></div>
+                                <div class="method-details">
+                                    <span class="label">LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener" class="value">serigne-modou-lo</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method-item">
+                                <div class="method-icon"><i class='bx bxl-github'></i></div>
+                                <div class="method-details">
+                                    <span class="label">GitHub</span>
+                                    <a href="https://github.com/smodou328" target="_blank" rel="noopener" class="value">github.com/smodou328</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Formulaire validé -->
+                <div class="form-card">
+                    <h3>Envoyez-moi un message</h3>
+                    
+                    <div id="formFeedback" class="form-feedback"></div>
+
+                    <form id="contactForm">
+                        <div class="form-grid-row">
+                            <div class="form-group">
+                                <label for="lastName">Votre Nom *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Ex: Lo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName">Votre Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Ex: Serigne Modou" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-row">
+                            <div class="form-group">
+                                <label for="email">Votre Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="nom@exemple.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Votre Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+221 7X XXX XX XX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Objet du message *</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Ex: Proposition de stage / Projet web" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Votre Message *</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Écrivez votre message ici..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class='bx bx-send'></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Remonter en haut">
+        <i class='bx bx-chevron-up'></i>
+    </button>
+
+    <!-- Footer (Bleu & Blanc) -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-copy">
+                &copy; 2025 - 2026 <span>Serigne Modou Lo</span> | Étudiant en Génie Logiciel UIDT. Tous droits réservés.
+            </p>
+
+            <div class="footer-socials">
+                <a href="https://wa.me/221763287964" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                <a href="mailto:lo065657@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+                <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/smodou328" target="_blank" rel="noopener noreferrer" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
 </body>
 </html>
-
-
-

@@ -1,37 +1,194 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propos de</title>
+    <meta name="description" content="Découvrez le parcours de Serigne Modou Lo, étudiant en Licence 3 Génie Logiciel à l'Université Iba Der Thiam de Thiès et développeur web.">
+    <title>À Propos de Moi | Serigne Modou Lo</title>
+    <!-- Google Fonts & Boxicons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">PORTFOLIO</a>
-        <nav class="nav">
-            <a href="./index.html">Accueil</a>
-            <a href="#">A propos de</a>
-            <a href="./Competence.html">Competences</a>
-            <a href="./Projet.html">Projets</a>
-            <a href="./Contact.html">Contact</a>
-         </nav> 
+    <!-- Header & Navigation Exact Format AliouDev221 (Floating Pill Navbar) -->
+    <header class="aliou-header">
+        <div class="nav-pill-container">
+            <a href="./index.html#accueil" class="nav-brand">
+                <div class="brand-avatar-wrap">
+                    <img src="./logo-icon.png" alt="SerigneDev221" class="brand-avatar">
+                </div>
+                <span class="brand-text">SerigneDev<span class="brand-suffix">221</span></span>
+            </a>
+
+            <nav class="nav-links-wrap">
+                <a href="./index.html#accueil" class="nav-pill-link">Accueil</a>
+                <a href="./Aproposde.html" class="nav-pill-link active">À propos</a>
+                <a href="./Competence.html" class="nav-pill-link">Compétences</a>
+                <a href="./index.html#services" class="nav-pill-link">Services</a>
+                <a href="./Projet.html" class="nav-pill-link">Projets</a>
+                <a href="./index.html#formations" class="nav-pill-link">Formations</a>
+                <a href="./Contact.html" class="nav-pill-link">Contact</a>
+            </nav>
+
+            <div class="nav-right-actions">
+                <button class="nav-mobile-btn" id="mobileToggle" aria-label="Ouvrir le menu">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-card" id="mobileMenu">
+            <a href="./index.html#accueil" class="mobile-item">Accueil</a>
+            <a href="./Aproposde.html" class="mobile-item active">À propos</a>
+            <a href="./Competence.html" class="mobile-item">Compétences</a>
+            <a href="./index.html#services" class="mobile-item">Services</a>
+            <a href="./Projet.html" class="mobile-item">Projets</a>
+            <a href="./index.html#formations" class="mobile-item">Formations</a>
+            <a href="./Contact.html" class="mobile-item">Contact</a>
+        </div>
     </header>
-    <section class="Aproposde">
-      <div class="Aproposde-content">
-        <h2 class="propos">A Propos de Moi </h2>
-        <p>Je suis actuellement étudiant en informatique à l'université Iba Der Thiam de Thies.Je suis passionnée par l'informatique depuis mon plus jeune age,et j'adore résoudre des problémes complexes par le biais de la programmation.J'ai travaillé sur plusieurs projets académiques et personnels que vous pouvez découvrir dans les sections ci-dessous.</p>
-      </div>
-    </section>
 
-    <footer>
-      <p>&copy; 2025 Serigne Modou | Tous droits reservés</p>
-  </footer>
+    <!-- Main Content -->
+    <main class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">
+                    <i class='bx bx-user'></i> Présentation & Parcours
+                </div>
+                <h1 class="section-title">À Propos de <span class="text-blue">Moi</span></h1>
+                <p class="section-subtitle">
+                    Étudiant en Génie Logiciel à l'UIDT de Thiès, passionné par le développement d'applications web modernes, les architectures logicielles et les bases de données.
+                </p>
+            </div>
 
- 
+            <div class="about-grid">
+                <!-- Left Column: Profile Card -->
+                <aside class="profile-card">
+                    <img src="./profile.jpg" alt="Photo de Serigne Modou Lo" class="profile-card-img">
+                    <h3>Serigne Modou Lo</h3>
+                    <p class="title">Licence 3 Génie Logiciel (UIDT)</p>
+
+                    <div class="profile-info-list">
+                        <div class="profile-info-item">
+                            <i class='bx bxs-graduation'></i>
+                            <span>Université Iba Der Thiam de Thiès</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxs-briefcase'></i>
+                            <span>Ex-Stagiaire chez Écoles au Sénégal</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxs-map'></i>
+                            <span>Touba / Thiès, Sénégal</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxs-envelope'></i>
+                            <span>lo065657@gmail.com</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxs-phone'></i>
+                            <span>+221 76 328 79 64</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxl-linkedin-square'></i>
+                            <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener">Profil LinkedIn</a>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class='bx bxl-github'></i>
+                            <a href="https://github.com/smodou328" target="_blank" rel="noopener">GitHub (smodou328)</a>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                        <a href="./cv.html" class="btn btn-primary" style="width: 100%;">
+                            <i class='bx bx-file'></i> Voir mon CV complet
+                        </a>
+                        <a href="https://smodou328.github.io/cv-serigne-modou-lo/" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%;">
+                            <i class='bx bx-link-external'></i> CV en ligne (GitHub Pages)
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Right Column: Bio & Core Pillars -->
+                <div class="about-content-box">
+                    <div class="bio-card">
+                        <h3><i class='bx bx-terminal'></i> Profil Professionnel</h3>
+                        <p>
+                            Étudiant en <strong>troisième année de Licence en Génie Logiciel à l'Université Iba Der Thiam de Thiès</strong>, 
+                            je suis passionné par le développement logiciel, les technologies web et les bases de données. Sérieux, motivé et autonome, je mets mes compétences en programmation et en conception d'applications au service de projets innovants.
+                        </p>
+                        <p>
+                            Mon stage en tant que <strong>Développeur Web chez Écoles au Sénégal</strong> m'a permis d'acquérir une expérience pratique concrète : développement et maintenance d'applications web, intégration d'interfaces responsives, développement d'API avec <strong>Laravel & React</strong>, gestion de bases de données et revues de code.
+                        </p>
+                        <p>
+                            Mes différents projets académiques et personnels m'ont permis de forger un esprit d'analyse rigoureux, un sens aigu du détail et une excellente aptitude au travail collaboratif.
+                        </p>
+                    </div>
+
+                    <!-- Highlight Cards -->
+                    <div class="about-stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class='bx bx-laptop'></i></div>
+                            <h4>Expérience en Entreprise</h4>
+                            <p>Stage de 3 mois chez <strong>Écoles au Sénégal</strong> : développement de l'application <strong>Tewna</strong> (Laravel/React) et contribution à <strong>Kaay Jang</strong>.</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class='bx bx-code-alt'></i></div>
+                            <h4>Stack Web & Backend</h4>
+                            <p>Maîtrise de Laravel, React, Django, Python, Tailwind CSS, JavaScript, HTML5/CSS3, MySQL et SQLite.</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class='bx bx-award'></i></div>
+                            <h4>Certifications Obtenues</h4>
+                            <p><strong>Elements of AI</strong> (Université d'Helsinki & MinnaLearn) et <strong>Python Essentials 1</strong> (Cisco Networking Academy).</p>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class='bx bx-layer'></i></div>
+                            <h4>Programmation Logicielle</h4>
+                            <p>Solides compétences en <strong>Java / JavaFX</strong>, <strong>Langage C</strong>, programmation procédurale et orientée objet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="btn-group" style="margin-top: 1rem;">
+                        <a href="./Projet.html" class="btn btn-primary">
+                            <i class='bx bx-folder'></i> Explorer mes projets
+                        </a>
+                        <a href="./Contact.html" class="btn btn-secondary">
+                            <i class='bx bx-conversation'></i> Discuter d'une collaboration
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-copy">
+                &copy; 2025 - 2026 <span>Serigne Modou Lo</span> | Tous droits réservés.
+            </p>
+            <div class="footer-socials">
+                <a href="https://wa.me/221763287964" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                <a href="mailto:lo065657@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+                <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/smodou328" target="_blank" rel="noopener noreferrer" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
 </body>
-
 </html>
-
-

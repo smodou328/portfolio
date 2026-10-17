@@ -1,75 +1,260 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Serigne Modou Lo</title>
+    <title>CV - Serigne Modou Lo | Génie Logiciel</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./Cv.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="photo-section">
-              <img src="./lo1.jpg" alt="Photo de Serigne Modou Lo">
+    <!-- Top Action Bar (Hidden on Print) -->
+    <div class="cv-actions-bar">
+        <div class="cv-actions-container">
+            <a href="./index.html" class="action-btn action-back">
+                <i class='bx bx-arrow-back'></i> Retour au Portfolio
+            </a>
+            <div class="actions-group">
+                <button onclick="window.print()" class="action-btn action-print">
+                    <i class='bx bx-printer'></i> Imprimer / Télécharger en PDF
+                </button>
+                <a href="https://smodou328.github.io/cv-serigne-modou-lo/" target="_blank" rel="noopener noreferrer" class="action-btn action-online">
+                    <i class='bx bx-link-external'></i> Version GitHub Pages
+                </a>
+                <a href="mailto:lo065657@gmail.com" class="action-btn action-contact">
+                    <i class='bx bx-envelope'></i> Me contacter
+                </a>
             </div>
-            <div class="info-section">
-                <h1>Serigne Modou Lo</h1>
-                <p>Étudiant en Informatique - deuxiéme année</p>
-                <p>Université Iba Der Thiam de Thiès</p>
-                <p>Téléphone : 763287964</p>
-                <p>Email : Lo065657@gmail.com</p>
-                <p>Adresse : Touba, Sénégal .</p>
-            </div>
-        </header>
+        </div>
+    </div>
 
-        <main>
-            <section class="content">
-                <div class="left-column">
-                    <h2>Compétences</h2>
+    <!-- Printable CV Sheet -->
+    <div class="cv-wrapper">
+        <div class="cv-sheet">
+            <!-- Sidebar (Bleu Marine & Blanc) -->
+            <aside class="sidebar">
+                <div class="photo-wrapper">
+                    <img src="./profile.jpg" alt="Photo de Serigne Modou Lo" class="photo">
+                </div>
+
+                <!-- Contact -->
+                <section class="side-section">
+                    <h2><span class="icon"><i class='bx bx-phone'></i></span> CONTACT</h2>
+                    <ul class="contact-list">
+                        <li><span class="icon"><i class='bx bx-phone-call'></i></span> 76 328 79 64</li>
+                        <li><span class="icon"><i class='bx bx-envelope'></i></span> lo065657@gmail.com</li>
+                        <li><span class="icon"><i class='bx bx-map-pin'></i></span> Touba, Sénégal</li>
+                        <li><span class="icon"><i class='bx bxl-linkedin'></i></span> <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener">serigne-modou-lo</a></li>
+                        <li><span class="icon"><i class='bx bxl-github'></i></span> <a href="https://github.com/smodou328" target="_blank" rel="noopener">smodou328</a></li>
+                    </ul>
+                </section>
+
+                <!-- Compétences Clés -->
+                <section class="side-section">
+                    <h2><span class="icon"><i class='bx bx-cog'></i></span> COMPÉTENCES CLÉS</h2>
+
+                    <h3>DÉVELOPPEMENT WEB</h3>
                     <ul>
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>Langage C</li>
-                        <li>Microsoft Word, Excel, PowerPoint</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Laravel</li>
+                        <li>Django</li>
+                        <li>React</li>
+                        <li>Tailwind CSS</li>
                     </ul>
 
-                    <h2>Langues</h2>
+                    <h3>PROGRAMMATION</h3>
+                    <ul>
+                        <li>Langage C</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                    </ul>
+
+                    <h3>BASES DE DONNÉES</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>SQLite</li>
+                    </ul>
+
+                    <h3>BUREAUTIQUE</h3>
+                    <ul>
+                        <li>Microsoft Word</li>
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft PowerPoint</li>
+                    </ul>
+                </section>
+
+                <!-- Langues -->
+                <section class="side-section">
+                    <h2><span class="icon"><i class='bx bx-globe'></i></span> LANGUES</h2>
                     <ul>
                         <li>Français : Courant</li>
                         <li>Anglais : Intermédiaire</li>
-                        <li>Wolof: langue maternelle</li>
+                        <li>Wolof : Langue maternelle</li>
                     </ul>
+                </section>
 
-                    <h2>Centres d'intérêt</h2>
+                <!-- Centres d'intérêt -->
+                <section class="side-section">
+                    <h2><span class="icon"><i class='bx bx-heart'></i></span> CENTRES D'INTÉRÊT</h2>
                     <ul>
+                        <li>Génie Logiciel</li>
+                        <li>Développement Web</li>
+                        <li>Intelligence Artificielle</li>
+                        <li>Cybersécurité</li>
                         <li>Lecture</li>
-                        <li>Programmation</li>
-                        <li>Sports</li>
+                        <li>Sport</li>
                     </ul>
+                </section>
+            </aside>
+
+            <!-- Main Content Column -->
+            <main class="content">
+                <header class="header">
+                    <h1>SERIGNE<br><span>MODOU LO</span></h1>
+                    <p class="subtitle">ÉTUDIANT EN GÉNIE LOGICIEL | DÉVELOPPEUR WEB | PROGRAMMATION</p>
+                </header>
+
+                <!-- Profil -->
+                <section class="main-section">
+                    <h2><span class="round-icon"><i class='bx bx-user'></i></span> PROFIL</h2>
+                    <p>
+                        Étudiant en troisième année de Licence en Génie Logiciel à l'Université Iba Der Thiam de Thiès, passionné par le développement logiciel, les technologies web et les bases de données. Sérieux, motivé et autonome, je mets mes compétences en programmation et en conception d'applications au service de projets innovants. Mes différents projets académiques m'ont permis de développer un esprit d'analyse, de rigueur et un excellent sens du travail en équipe.
+                    </p>
+                </section>
+
+                <!-- Expérience & Projets -->
+                <section class="main-section">
+                    <h2><span class="round-icon"><i class='bx bx-briefcase'></i></span> EXPÉRIENCE / PROJETS</h2>
+
+                    <div class="entry">
+                        <h3>STAGIAIRE DÉVELOPPEUR WEB — ÉCOLES AU SÉNÉGAL</h3>
+                        <p class="school">10 Août 2026 – 10 Novembre 2026</p>
+                        <ul>
+                            <li>Participation au développement et à la maintenance des applications et plateformes web.</li>
+                            <li>Intégration d'interfaces utilisateur responsives et développement de nouvelles fonctionnalités.</li>
+                            <li>Participation au développement et à l'intégration d'API, et à la gestion des bases de données.</li>
+                            <li>Tests, correction d'anomalies, revues de code et documentation technique.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>APPLICATION TEWNA — ÉCOLES AU SÉNÉGAL</h3>
+                        <ul>
+                            <li>Développement de <strong>Tewna</strong>, application de pointage d'Écoles au Sénégal, avec Laravel et React.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>KAAY JANG — ÉCOLES AU SÉNÉGAL (EN COURS)</h3>
+                        <ul>
+                            <li>Participation au développement et à l'amélioration de <strong>Kaay Jang</strong>, plateforme éducative qui constitue la nouvelle version d'Écoles au Sénégal.</li>
+                            <li>Contribution à la mise en place d'espaces dédiés aux élèves, aux enseignants et aux équipes administratives.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>DÉVELOPPEUR WEB</h3>
+                        <ul>
+                            <li>Réalisation d'un CV professionnel en HTML et CSS.</li>
+                            <li>Réalisation de sites web responsives.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>PROJET BIBLIOTHÈQUE</h3>
+                        <ul>
+                            <li>Participation à la conception d'une application de gestion des prêts avec Google Sheets, Google Forms et Apps Script.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>PROJET JAVA</h3>
+                        <ul>
+                            <li>Développement d'une application de gestion des salles et des emplois du temps en Java/JavaFX.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>DÉVELOPPEMENT LOGICIEL</h3>
+                        <ul>
+                            <li>Réalisation de plusieurs applications en Python, Java et C dans le cadre des projets universitaires.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Formation -->
+                <section class="main-section">
+                    <h2><span class="round-icon"><i class='bx bxs-graduation'></i></span> FORMATION</h2>
+
+                    <div class="entry">
+                        <h3>LICENCE INFORMATIQUE – OPTION GÉNIE LOGICIEL</h3>
+                        <p class="school">Université Iba Der Thiam de Thiès</p>
+                        <ul class="plain">
+                            <li><strong>2025 – 2026 :</strong> Licence 3 Génie Logiciel — Laravel, Python, Django</li>
+                            <li><strong>2024 – 2025 :</strong> Licence 2 Informatique — Java, Bases de Données</li>
+                            <li><strong>2023 – 2024 :</strong> Licence 1 Informatique — HTML5, CSS3, JavaScript, Langage C</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>BACCALAURÉAT SCIENTIFIQUE</h3>
+                        <p class="school">GSCAB</p>
+                        <ul class="plain">
+                            <li><strong>2023</strong></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Qualités & Atouts -->
+                <div class="two-col">
+                    <section class="main-section half">
+                        <h2><span class="round-icon"><i class='bx bx-check'></i></span> QUALITÉS</h2>
+                        <ul>
+                            <li>Organisé</li>
+                            <li>Rigoureux</li>
+                            <li>Dynamique</li>
+                            <li>Esprit d'équipe</li>
+                            <li>Curieux</li>
+                            <li>Autonome</li>
+                            <li>Sens de l'analyse</li>
+                            <li>Bonne capacité d'adaptation</li>
+                        </ul>
+                    </section>
+
+                    <section class="main-section half">
+                        <h2><span class="round-icon"><i class='bx bx-star'></i></span> ATOUTS</h2>
+                        <ul>
+                            <li>Passionné par le développement logiciel</li>
+                            <li>Apprentissage rapide</li>
+                            <li>Sens du détail</li>
+                            <li>Esprit d'initiative</li>
+                            <li>Motivé à relever de nouveaux défis</li>
+                            <li>Bonne capacité de résolution de problèmes</li>
+                        </ul>
+                    </section>
                 </div>
 
-                <div class="right-column">
-                    <h2>Formation</h2>
+                <!-- Certifications -->
+                <section class="main-section">
+                    <h2><span class="round-icon"><i class='bx bx-award'></i></span> CERTIFICATIONS</h2>
                     <ul>
-                        <li>2025 Deuxiéme année en Informatique Université Iba Der Thiam de Thiès.</li>
-                        <li>2023 Baccalauréat Scientifique au privee GSCAB .</li>
+                        <li><strong>Elements of AI</strong> — University of Helsinki &amp; MinnaLearn</li>
+                        <li><strong>Python Essentials 1</strong> — Cisco Networking Academy</li>
+                        <li><strong>Attestation de fin de stage</strong> — Écoles au Sénégal</li>
+                        <li><strong>Permis de conduire</strong></li>
                     </ul>
-
-                    <h2>Expériences</h2>
-                    <ul>
-                        <li>Projet de realisation d'un CV.</li>
-                        <li>Création de sites web en HTML/CSS.</li>
-                        <li>Participation à un projet de gestion des prets dans une bubliotheque.</li>
-                        <li>Permis de conduire.</li>
-
-                    </ul>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p>&copy; 2025 Serigne Modou | Tous droits reservés</p>
-        </footer>
+                </section>
+            </main>
+        </div>
     </div>
 </body>
 </html>

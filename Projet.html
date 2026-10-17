@@ -1,51 +1,266 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet</title>
+    <meta name="description" content="Projets informatiques réalisés par Serigne Modou Lo : Tewna (Laravel/React), Kaay Jang, Gestion des salles (Java/JavaFX), Gestion de bibliothèque.">
+    <title>Mes Projets | Serigne Modou Lo</title>
+    <!-- Google Fonts & Boxicons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">PORTFOLIO</a>
-        <nav class="nav">
-            <a href="./index.html">Accueil</a>
-            <a href="./Aproposde.html">A propos de</a>
-            <a href="./Competence.html">Competences</a>
-            <a href="#">Projets</a>
-            <a href="./Contact.html">Contact</a>
-         </nav> 
-    </header>
-    <section class="projet">
-       <div class="projet-content">
-        <h2 class="proj">Mes projets</h2>
-        
-        <div id="pp">
-            <div class="blog">
-                <h3>Dévéloppement d'un site E-Commerce</h3>
-                <p>Créer un site de commerce en utilisant des technologies comme HTML,CSS,JavaScript.</p>
-            </div>
-            <div class="blog">
-                <h3>Curriculum Vitae</h3>
-                <p>Création d'un CV en utilisant HTML et CSS. </p>
-            </div>
-            <div class="blog">
-                <h3>Présentations dynamyques</h3>
-                <p>Création des présentations engageantes en Anglais,en Projet Personnel et Professionnels et en Physique par le biais du PowerPoint et Word,
-                   et la  Participation d'un projet de gestion de pret dans une bubliotheque.
-                </p>
+    <!-- Header & Navigation Exact Format AliouDev221 (Floating Pill Navbar) -->
+    <header class="aliou-header">
+        <div class="nav-pill-container">
+            <a href="./index.html#accueil" class="nav-brand">
+                <div class="brand-avatar-wrap">
+                    <img src="./logo-icon.png" alt="SerigneDev221" class="brand-avatar">
+                </div>
+                <span class="brand-text">SerigneDev<span class="brand-suffix">221</span></span>
+            </a>
+
+            <nav class="nav-links-wrap">
+                <a href="./index.html#accueil" class="nav-pill-link">Accueil</a>
+                <a href="./Aproposde.html" class="nav-pill-link">À propos</a>
+                <a href="./Competence.html" class="nav-pill-link">Compétences</a>
+                <a href="./index.html#services" class="nav-pill-link">Services</a>
+                <a href="./Projet.html" class="nav-pill-link active">Projets</a>
+                <a href="./index.html#formations" class="nav-pill-link">Formations</a>
+                <a href="./Contact.html" class="nav-pill-link">Contact</a>
+            </nav>
+
+            <div class="nav-right-actions">
+                <button class="nav-mobile-btn" id="mobileToggle" aria-label="Ouvrir le menu">
+                    <i class='bx bx-menu'></i>
+                </button>
             </div>
         </div>
-       </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2025 Serigne Modou | Tous droits reservés</p>
+        <div class="mobile-menu-card" id="mobileMenu">
+            <a href="./index.html#accueil" class="mobile-item">Accueil</a>
+            <a href="./Aproposde.html" class="mobile-item">À propos</a>
+            <a href="./Competence.html" class="mobile-item">Compétences</a>
+            <a href="./index.html#services" class="mobile-item">Services</a>
+            <a href="./Projet.html" class="mobile-item active">Projets</a>
+            <a href="./index.html#formations" class="mobile-item">Formations</a>
+            <a href="./Contact.html" class="mobile-item">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">
+                    <i class='bx bx-briefcase-alt'></i> Réalisations Logicielles & Web
+                </div>
+                <h1 class="section-title">Mes <span class="text-blue">Projets</span></h1>
+                <p class="section-subtitle">
+                    Aperçu de mes réalisations issues de mon stage chez Écoles au Sénégal, de projets universitaires (UIDT) et de développements personnels.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1: Application TEWNA -->
+                <article class="project-card">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bx-fingerprint'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">React.js</span>
+                            <span class="project-tag">API REST</span>
+                        </div>
+                        <h3 class="project-title">Application TEWNA — Écoles au Sénégal</h3>
+                        <p class="project-desc">
+                            Développement de <strong>Tewna</strong>, application de pointage et de présence pour l'organisation <em>Écoles au Sénégal</em>. Conception de l'interface en React, gestion des routes API avec Laravel et persistance des données.
+                        </p>
+                        <div class="project-footer">
+                            <a href="./Contact.html" class="project-link">
+                                Plus d'informations <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">Stage en Entreprise</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: KAAY JANG -->
+                <article class="project-card">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bx-book-open'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Plateforme Éducative</span>
+                            <span class="project-tag">Web</span>
+                            <span class="project-tag">En cours</span>
+                        </div>
+                        <h3 class="project-title">KAAY JANG — Écoles au Sénégal</h3>
+                        <p class="project-desc">
+                            Participation active au développement et à l'évolution de la nouvelle version de la plateforme éducative. Mise en place d'espaces dédiés aux élèves, aux enseignants et à l'administration scolaire.
+                        </p>
+                        <div class="project-footer">
+                            <a href="./Contact.html" class="project-link">
+                                Échanger sur ce projet <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: #16a34a;">Projet Actif</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Gestion des Salles Java -->
+                <article class="project-card">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bxl-java'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">JavaFX</span>
+                            <span class="project-tag">POO</span>
+                        </div>
+                        <h3 class="project-title">Gestion des Salles & Emplois du Temps</h3>
+                        <p class="project-desc">
+                            Conception et développement d'une application logicielle en Java et JavaFX pour la planification, la réservation des salles de cours et l'organisation des emplois du temps universitaires.
+                        </p>
+                        <div class="project-footer">
+                            <a href="./Competence.html" class="project-link">
+                                Compétences Java <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-light);">Projet Universitaire</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Gestion Bibliothèque -->
+                <article class="project-card">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bx-library'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Apps Script</span>
+                            <span class="project-tag">Langage C</span>
+                            <span class="project-tag">Automatisation</span>
+                        </div>
+                        <h3 class="project-title">Système de Gestion de Prêts en Bibliothèque</h3>
+                        <p class="project-desc">
+                            Conception d'une application de gestion des prêts et retours d'ouvrages avec Google Forms, Google Sheets et Google Apps Script, combinée à une modélisation algorithmique en Langage C.
+                        </p>
+                        <div class="project-footer">
+                            <a href="./Contact.html" class="project-link">
+                                Demander des détails <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-light);">Projet Académique</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: CV Interactif & Portfolio -->
+                <article class="project-card">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bx-laptop'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">CV Numérique & Portfolio Web</h3>
+                        <p class="project-desc">
+                            Création d'un CV en ligne hébergé sur GitHub Pages et de ce portfolio complet aux couleurs Bleu & Blanc avec typographie soignée, version imprimable A4 et navigation responsive.
+                        </p>
+                        <div class="project-footer">
+                            <a href="https://smodou328.github.io/cv-serigne-modou-lo/" target="_blank" rel="noopener" class="project-link">
+                                Voir sur GitHub Pages <i class='bx bx-link-external'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">En ligne</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Applications Python, Django & E-Commerce -->
+                <article class="project-card">
+                    <div class="project-badge-top">
+                        <div class="project-badge-icon">
+                            <i class='bx bxl-python'></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <h3 class="project-title">Applications Web Python & Django</h3>
+                        <p class="project-desc">
+                            Développement de projets d'applications web avec Django et Python dans le cadre du cursus de Licence 3 Génie Logiciel : modélisation relationnelle, formulaires et authentification sécurisée.
+                        </p>
+                        <div class="project-footer">
+                            <a href="./Contact.html" class="project-link">
+                                Me contacter <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">Génie Logiciel L3</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Call to action card -->
+            <div style="margin-top: 4rem; background: #ffffff; border: 2px solid var(--border-blue); border-radius: var(--radius-lg); padding: 3rem 2rem; text-align: center; box-shadow: var(--shadow-md);">
+                <h3 style="font-size: 1.8rem; color: var(--blue-primary); margin-bottom: 0.8rem;">Vous avez un projet ou une opportunité à proposer ?</h3>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem auto;">
+                    Disponible pour des projets de développement web (Laravel, React, Django), des opportunités professionnelles ou des collaborations techniques.
+                </p>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="./Contact.html" class="btn btn-primary">
+                        <i class='bx bx-send'></i> Prendre contact
+                    </a>
+                    <a href="https://wa.me/221763287964" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class='bx bxl-whatsapp'></i> Échanger sur WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-copy">
+                &copy; 2025 - 2026 <span>Serigne Modou Lo</span> | Tous droits réservés.
+            </p>
+            <div class="footer-socials">
+                <a href="https://wa.me/221763287964" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                <a href="mailto:lo065657@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+                <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/smodou328" target="_blank" rel="noopener noreferrer" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
     </footer>
 
-    
+    <!-- Scripts -->
+    <script src="./script.js"></script>
 </body>
-
 </html>

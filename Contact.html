@@ -1,76 +1,216 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="Contactez Serigne Modou Lo : opportunités professionnelles, projets informatiques, développement web (Laravel, React, Django).">
+    <title>Contact | Serigne Modou Lo</title>
+    <!-- Google Fonts & Boxicons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">PORTFOLIO</a>
-        <nav class="nav">
-            <a href="./index.html">Accueil</a>
-            <a href="./Aproposde.html">A propos de</a>
-            <a href="./Competence.html">Competences</a>
-            <a href="./Projet.html">Projets</a>
-            <a href="#">Contact</a>
-         </nav>
+    <!-- Header & Navigation Exact Format AliouDev221 (Floating Pill Navbar) -->
+    <header class="aliou-header">
+        <div class="nav-pill-container">
+            <a href="./index.html#accueil" class="nav-brand">
+                <div class="brand-avatar-wrap">
+                    <img src="./logo-icon.png" alt="SerigneDev221" class="brand-avatar">
+                </div>
+                <span class="brand-text">SerigneDev<span class="brand-suffix">221</span></span>
+            </a>
+
+            <nav class="nav-links-wrap">
+                <a href="./index.html#accueil" class="nav-pill-link">Accueil</a>
+                <a href="./Aproposde.html" class="nav-pill-link">À propos</a>
+                <a href="./Competence.html" class="nav-pill-link">Compétences</a>
+                <a href="./index.html#services" class="nav-pill-link">Services</a>
+                <a href="./Projet.html" class="nav-pill-link">Projets</a>
+                <a href="./index.html#formations" class="nav-pill-link">Formations</a>
+                <a href="./Contact.html" class="nav-pill-link active">Contact</a>
+            </nav>
+
+            <div class="nav-right-actions">
+                <button class="nav-mobile-btn" id="mobileToggle" aria-label="Ouvrir le menu">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-card" id="mobileMenu">
+            <a href="./index.html#accueil" class="mobile-item">Accueil</a>
+            <a href="./Aproposde.html" class="mobile-item">À propos</a>
+            <a href="./Competence.html" class="mobile-item">Compétences</a>
+            <a href="./index.html#services" class="mobile-item">Services</a>
+            <a href="./Projet.html" class="mobile-item">Projets</a>
+            <a href="./index.html#formations" class="mobile-item">Formations</a>
+            <a href="./Contact.html" class="mobile-item active">Contact</a>
+        </div>
     </header>
-         <h2 id="h2">Formulaire de Contact</h2>
-         <div>
-         <form id="form" class="form-example">
-            <p id="mess"></p>
-            <div class="menu">
-                <div class="Modou">
-                    <label for="last_name">Votre Nom</label>
-                    <input type="text" name="last_name" id="last_name"><br>
-                </div>
 
-                <div class="Modou">
-                    <label for="first_name">Votre Prénom</label>
-                    <input type="text" name="last_name" id="first_name"><br>
+    <!-- Main Content -->
+    <main class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">
+                    <i class='bx bx-envelope'></i> Parlons Ensemble
                 </div>
+                <h1 class="section-title">Me <span class="text-blue">Contacter</span></h1>
+                <p class="section-subtitle">
+                    Une opportunité de stage, un projet de développement web ou une question ? N'hésitez pas à m'écrire.
+                </p>
             </div>
 
-            <div class="menu">
-                <div class="Modou">
-                    <label for="mail">e_mail <a href="mailto:Lo065657@gmail.com" class="mame">Lo065657@gmail.com</a></label>
-                    <input type="mail" name="mail" id="mail"><br> 
+            <div class="contact-layout">
+                <!-- Left Column: Coordonnées -->
+                <div class="contact-info-col">
+                    <div class="contact-card">
+                        <h3>Coordonnées Directes</h3>
+                        <p class="lead-text">
+                            Disponible et réactif pour échanger sur vos projets logiciels ou toute proposition de collaboration.
+                        </p>
+
+                        <div class="contact-methods">
+                            <!-- Email -->
+                            <div class="contact-method-item">
+                                <div class="method-icon">
+                                    <i class='bx bx-envelope'></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="label">Adresse Email</span>
+                                    <a href="mailto:lo065657@gmail.com" class="value">lo065657@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Téléphone -->
+                            <div class="contact-method-item">
+                                <div class="method-icon">
+                                    <i class='bx bx-phone'></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="label">Téléphone</span>
+                                    <a href="tel:+221763287964" class="value">+221 76 328 79 64</a>
+                                </div>
+                            </div>
+
+                            <!-- WhatsApp -->
+                            <div class="contact-method-item">
+                                <div class="method-icon">
+                                    <i class='bx bxl-whatsapp'></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="label">WhatsApp Direct</span>
+                                    <a href="https://wa.me/221763287964" target="_blank" rel="noopener noreferrer" class="value">Démarrer une discussion</a>
+                                </div>
+                            </div>
+
+                            <!-- Localisation -->
+                            <div class="contact-method-item">
+                                <div class="method-icon">
+                                    <i class='bx bx-map-pin'></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="label">Localisation</span>
+                                    <span class="value">Touba / Thiès, Sénégal</span>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div class="contact-method-item">
+                                <div class="method-icon">
+                                    <i class='bx bxl-linkedin'></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="label">LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener" class="value">serigne-modou-lo</a>
+                                </div>
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="contact-method-item">
+                                <div class="method-icon">
+                                    <i class='bx bxl-github'></i>
+                                </div>
+                                <div class="method-details">
+                                    <span class="label">GitHub</span>
+                                    <a href="https://github.com/smodou328" target="_blank" rel="noopener" class="value">github.com/smodou328</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="Modou">
-                    <label for="number">Votre téléphone</label>
-                    <input type="nombre" name="number" id="nombre"><br> 
+                <!-- Right Column: Formulaire Propre -->
+                <div class="form-card">
+                    <h3>Envoyez-moi un message</h3>
+                    
+                    <div id="formFeedback" class="form-feedback"></div>
+
+                    <form id="contactForm">
+                        <div class="form-grid-row">
+                            <div class="form-group">
+                                <label for="lastName">Votre Nom *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Ex: Lo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName">Votre Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Ex: Serigne Modou" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-row">
+                            <div class="form-group">
+                                <label for="email">Votre Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="nom@exemple.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Votre Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+221 7X XXX XX XX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Objet du message *</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Ex: Opportunité de stage / Projet web" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Votre Message *</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Écrivez votre message ici..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class='bx bx-send'></i> Envoyer le message
+                        </button>
+                    </form>
                 </div>
             </div>
+        </div>
+    </main>
 
-            <div id="menu">
-                <div class="Modou">
-                    <label for="message"> Message</label>
-                    <textarea type="text" name="message" id="message"></textarea><br>
-                </div>
-                <div id="Modou">
-                    <input type="submit" value="Envoyer le message" class="env"><br>
-                </div> 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-copy">
+                &copy; 2025 - 2026 <span>Serigne Modou Lo</span> | Tous droits réservés.
+            </p>
+            <div class="footer-socials">
+                <a href="https://wa.me/221763287964" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                <a href="mailto:lo065657@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
+                <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/smodou328" target="_blank" rel="noopener noreferrer" title="GitHub"><i class='bx bxl-github'></i></a>
             </div>
-         </form>
-    </div>
+        </div>
+    </footer>
 
-</div>
-<div class="reseaux-sociaux">
-    <a href="#"><box-icon type='logo' name='whatsapp'></box-icon></a>
-    <a href="#"><box-icon type='logo' name='twitter'></box-icon></a>
-    <a href="#"><box-icon type='logo' name='linkedin'></box-icon></a>
-    <a href="#"><box-icon type='logo' name='instagram'></box-icon></a>
- </div>
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
- <footer>
-    <p>&copy; 2025 Serigne Modou | Tous droits reservés</p>
- </footer>
+    <!-- Scripts -->
+    <script src="./script.js"></script>
 </body>
 </html>
-
