@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Serigne Modou Lo — Étudiant en Génie Logiciel à l'Université Iba Der Thiam de Thiès & Développeur Web / Logiciel.">
     <title>CV - Serigne Modou Lo | Génie Logiciel</title>
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./favicon.png">
     <link rel="shortcut icon" href="./favicon.ico">
@@ -37,9 +39,10 @@
     <!-- Printable CV Sheet -->
     <div class="cv-wrapper">
         <div class="cv-sheet">
-            <!-- Sidebar (Bleu Marine & Blanc) -->
+            <!-- ================= COLONNE DE GAUCHE (SIDEBAR) ================= -->
             <aside class="sidebar">
                 <div class="photo-wrapper">
+                    <!-- Photo du Portfolio conservée -->
                     <img src="./profile.jpg" alt="Photo de Serigne Modou Lo" class="photo">
                 </div>
 
@@ -48,10 +51,25 @@
                     <h2><span class="icon"><i class='bx bx-phone'></i></span> CONTACT</h2>
                     <ul class="contact-list">
                         <li><span class="icon"><i class='bx bx-phone-call'></i></span> 76 328 79 64</li>
-                        <li><span class="icon"><i class='bx bx-envelope'></i></span> lo065657@gmail.com</li>
+                        <li><span class="icon"><i class='bx bx-envelope'></i></span> <a href="mailto:lo065657@gmail.com">lo065657@gmail.com</a></li>
                         <li><span class="icon"><i class='bx bx-map-pin'></i></span> Touba, Sénégal</li>
-                        <li><span class="icon"><i class='bx bxl-linkedin'></i></span> <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener">serigne-modou-lo</a></li>
+                        <li><span class="icon"><i class='bx bxl-linkedin'></i></span> <a href="https://www.linkedin.com/in/serigne-modou-lo-a59762390" target="_blank" rel="noopener">linkedin.com/in/serigne-modou-lo</a></li>
                         <li><span class="icon"><i class='bx bxl-github'></i></span> <a href="https://github.com/smodou328" target="_blank" rel="noopener">smodou328</a></li>
+                        <li><span class="icon"><i class='bx bx-globe'></i></span> <a href="https://smodou328.github.io/portfolio/" target="_blank" rel="noopener">smodou328.github.io/portfolio</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section Qualités & Atouts (Fusionnée & positionnée dans la colonne de gauche comme sur le CV en ligne) -->
+                <section class="side-section">
+                    <h2><span class="icon"><i class='bx bx-star'></i></span> QUALITÉS &amp; ATOUTS</h2>
+                    <ul class="soft-skills-list">
+                        <li>Rigueur &amp; sens du détail</li>
+                        <li>Sens de l'analyse &amp; résolution de problèmes</li>
+                        <li>Autonomie &amp; esprit d'initiative</li>
+                        <li>Adaptabilité &amp; apprentissage rapide</li>
+                        <li>Esprit d'équipe &amp; dynamisme</li>
+                        <li>Organisation &amp; sens des responsabilités</li>
+                        <li>Passion pour le développement logiciel</li>
                     </ul>
                 </section>
 
@@ -116,7 +134,7 @@
                 </section>
             </aside>
 
-            <!-- Main Content Column -->
+            <!-- ================= COLONNE DE DROITE (CONTENU PRINCIPAL) ================= -->
             <main class="content">
                 <header class="header">
                     <h1>SERIGNE<br><span>MODOU LO</span></h1>
@@ -136,8 +154,10 @@
                     <h2><span class="round-icon"><i class='bx bx-briefcase'></i></span> EXPÉRIENCE / PROJETS</h2>
 
                     <div class="entry">
-                        <h3>STAGIAIRE DÉVELOPPEUR WEB — ÉCOLES AU SÉNÉGAL</h3>
-                        <p class="school">10 Août 2026 – 10 Novembre 2026</p>
+                        <div class="entry-header">
+                            <h3>STAGIAIRE DÉVELOPPEUR WEB — ÉCOLES AU SÉNÉGAL</h3>
+                            <span class="entry-date">10 Août 2026 – 10 Novembre 2026 (En cours)</span>
+                        </div>
                         <ul>
                             <li>Participation au développement et à la maintenance des applications et plateformes web.</li>
                             <li>Intégration d'interfaces utilisateur responsives et développement de nouvelles fonctionnalités.</li>
@@ -147,16 +167,21 @@
                     </div>
 
                     <div class="entry">
-                        <h3>APPLICATION TEWNA — ÉCOLES AU SÉNÉGAL</h3>
+                        <h3><strong>APPLICATION TEWNA</strong> — ÉCOLES AU SÉNÉGAL</h3>
+                        <p class="tech-stack">Technologies : <strong>Laravel</strong>, <strong>React</strong>, <strong>API REST</strong></p>
                         <ul>
-                            <li>Développement de <strong>Tewna</strong>, application de pointage d'Écoles au Sénégal, avec Laravel et React.</li>
+                            <li>Développement de l'application de pointage <strong>Tewna</strong> pour la gestion automatisée des présences.</li>
+                            <li>Conception de l'architecture backend et développement d'<strong>API REST</strong> avec <strong>Laravel</strong>.</li>
+                            <li>Intégration de l'interface utilisateur dynamique et responsive avec <strong>React</strong>.</li>
                         </ul>
                     </div>
 
                     <div class="entry">
-                        <h3>KAAY JANG — ÉCOLES AU SÉNÉGAL (EN COURS)</h3>
+                        <h3><strong>KAAY JANG</strong> — ÉCOLES AU SÉNÉGAL (EN COURS)</h3>
+                        <p class="tech-stack">Technologies : <strong>Laravel</strong>, <strong>React</strong>, <strong>API REST</strong></p>
                         <ul>
-                            <li>Participation au développement et à l'amélioration de <strong>Kaay Jang</strong>, plateforme éducative qui constitue la nouvelle version d'Écoles au Sénégal.</li>
+                            <li>Participation active au développement de <strong>Kaay Jang</strong>, plateforme éducative nouvelle version d'Écoles au Sénégal.</li>
+                            <li>Développement full-stack avec <strong>Laravel</strong>, <strong>React</strong> et intégration d'<strong>API REST</strong>.</li>
                             <li>Contribution à la mise en place d'espaces dédiés aux élèves, aux enseignants et aux équipes administratives.</li>
                         </ul>
                     </div>
@@ -214,43 +239,44 @@
                     </div>
                 </section>
 
-                <!-- Qualités & Atouts -->
-                <div class="two-col">
-                    <section class="main-section half">
-                        <h2><span class="round-icon"><i class='bx bx-check'></i></span> QUALITÉS</h2>
-                        <ul>
-                            <li>Organisé</li>
-                            <li>Rigoureux</li>
-                            <li>Dynamique</li>
-                            <li>Esprit d'équipe</li>
-                            <li>Curieux</li>
-                            <li>Autonome</li>
-                            <li>Sens de l'analyse</li>
-                            <li>Bonne capacité d'adaptation</li>
-                        </ul>
-                    </section>
-
-                    <section class="main-section half">
-                        <h2><span class="round-icon"><i class='bx bx-star'></i></span> ATOUTS</h2>
-                        <ul>
-                            <li>Passionné par le développement logiciel</li>
-                            <li>Apprentissage rapide</li>
-                            <li>Sens du détail</li>
-                            <li>Esprit d'initiative</li>
-                            <li>Motivé à relever de nouveaux défis</li>
-                            <li>Bonne capacité de résolution de problèmes</li>
-                        </ul>
-                    </section>
-                </div>
-
-                <!-- Certifications -->
+                <!-- Certifications (Alignées avec le CV en ligne) -->
                 <section class="main-section">
                     <h2><span class="round-icon"><i class='bx bx-award'></i></span> CERTIFICATIONS</h2>
-                    <ul>
-                        <li><strong>Elements of AI</strong> — University of Helsinki &amp; MinnaLearn</li>
-                        <li><strong>Python Essentials 1</strong> — Cisco Networking Academy</li>
-                        <li><strong>Attestation de fin de stage</strong> — Écoles au Sénégal</li>
-                        <li><strong>Permis de conduire</strong></li>
+                    <ul class="cert-list">
+                        <li>
+                            <span class="cert-bullet"><i class='bx bx-code-alt'></i></span>
+                            <div>
+                                <a href="https://www.credly.com/badges/21ee6272-469c-4f35-bf81-b228a73a2136" target="_blank" rel="noopener noreferrer" class="cert-link" title="Vérifier le badge officiel sur Credly">
+                                    <strong>Python Essentials 1</strong> — Cisco Networking Academy &amp; OpenEDG Python Institute
+                                    <i class='bx bx-link-external cert-ext-icon'></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cert-bullet"><i class='bx bx-bulb'></i></span>
+                            <div>
+                                <a href="https://certificates.mooc.fi/validate/m18rqwmogfe" target="_blank" rel="noopener noreferrer" class="cert-link" title="Vérifier le certificat officiel University of Helsinki">
+                                    <strong>Elements of AI</strong> — University of Helsinki &amp; MinnaLearn (Sorbonne Université)
+                                    <i class='bx bx-link-external cert-ext-icon'></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cert-bullet"><i class='bx bx-car'></i></span>
+                            <div>
+                                <strong>Permis de conduire</strong> — Catégories A1 &amp; B (République du Sénégal)
+                            </div>
+                        </li>
+                        <li>
+                            <span class="cert-bullet"><i class='bx bx-briefcase'></i></span>
+                            <div>
+                                <a href="https://ecolesausenegal.com/" target="_blank" rel="noopener noreferrer" class="cert-link" title="Consulter le site officiel d'Écoles au Sénégal">
+                                    <strong>Stage Développeur Web</strong> — Écoles au Sénégal
+                                    <i class='bx bx-link-external cert-ext-icon'></i>
+                                </a>
+                                <em>(en cours jusqu'au 10 Novembre 2026 — attestation à venir)</em>
+                            </div>
+                        </li>
                     </ul>
                 </section>
             </main>
