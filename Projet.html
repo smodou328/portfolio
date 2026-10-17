@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="./favicon.png">
     <link rel="shortcut icon" href="./favicon.ico">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?v=2.7">
 </head>
 <body>
     <!-- Header & Navigation Exact Format AliouDev221 (Floating Pill Navbar) -->
@@ -200,28 +200,39 @@
                     </div>
                 </article>
 
-                <!-- Project 6: Applications Python, Django & E-Commerce -->
-                <article class="project-card">
-                    <div class="project-badge-top">
-                        <div class="project-badge-icon">
-                            <i class='bx bxl-python'></i>
+                <!-- Project 6: CrousSpace (Python Flask & SQLAlchemy) -->
+                <article class="project-card"
+                    data-project="crousspace"
+                    data-title="CrousSpace — Système Intégré de Gestion des Locaux Universitaires (CROUS-T)"
+                    data-gallery='["./assets/projects/crousspace/crousspace-cover.png", "./assets/projects/crousspace/crousspace-portal.png", "./assets/projects/crousspace/crousspace-workflows.png", "./assets/projects/crousspace/crousspace-architecture.png"]'
+                    data-gallery-captions='["Vue d&apos;ensemble & Couverture officielle CROUS-T", "Portail Démo & Catalogue des locaux commerciaux (Multi-écrans)", "Workflows Métier : Attribution, Maintenance, QHSE & Paiements", "Architecture Logicielle Python Flask, SQLAlchemy & Sécurité RBAC"]'
+                    data-role="Analyse, Conception & Développement — Gestionnaire des interfaces Comptable & Administrateur (facturation des loyers/redevances, encaissements, émission des quittances de loyer, gestion RBAC des utilisateurs)."
+                    data-objectifs="Digitaliser et centraliser l'attribution des locaux universitaires, fiabiliser le recouvrement des redevances locatives et fluidifier le traitement des incidents techniques et d'hygiène QHSE."
+                    data-technologies="Python 3, Flask (Architecture MVC), SQLAlchemy ORM, SQLite & PostgreSQL, Tailwind CSS, Jinja2, Ngrok, Werkzeug/Bcrypt, Git / GitHub"
+                    data-challenges="Ségrégation stricte des privilèges d'accès via RBAC, génération automatisée de quittances comptables fiables et orchestration multi-rôles en temps réel."
+                    data-skills="Architecture logicielle Flask, modélisation ORM relationnelle, sécurité des sessions web, travail collaboratif Gitflow, tests d'intégration.">
+                    <div class="project-thumb-wrap">
+                        <img src="./assets/projects/crousspace/crousspace-cover.png" alt="CrousSpace — Système Intégré de Gestion des Locaux Universitaires (CROUS-T)" class="project-thumb-img" loading="lazy">
+                        <div class="project-thumb-overlay">
+                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 4 Captures</span>
                         </div>
                     </div>
                     <div class="project-body">
                         <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Django</span>
-                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Python / Flask</span>
+                            <span class="project-tag">SQLAlchemy</span>
+                            <span class="project-tag">Tailwind CSS</span>
+                            <span class="project-tag">Comptable & Admin</span>
                         </div>
-                        <h3 class="project-title">Applications Web Python & Django</h3>
+                        <h3 class="project-title">CrousSpace — Gestion des Locaux & Espaces Commerciaux (CROUS-T)</h3>
                         <p class="project-desc">
-                            Développement de projets d'applications web avec Django et Python dans le cadre du cursus de Licence 3 Génie Logiciel : modélisation relationnelle, formulaires et authentification sécurisée.
+                            Plateforme web intégrée dédiée à l'attribution, au suivi et à la maintenance des locaux universitaires du CROUS-T. Développement complet des modules <strong>Comptable & Administrateur</strong> : facturation des redevances, quittances automatiques et contrôle d'accès RBAC.
                         </p>
                         <div class="project-footer">
                             <a href="./Contact.html" class="project-link">
-                                Me contacter <i class='bx bx-right-arrow-alt'></i>
+                                En savoir plus <i class='bx bx-right-arrow-alt'></i>
                             </a>
-                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">Génie Logiciel L3</span>
+                            <span class="project-status-badge"><i class='bx bxl-python'></i> CROUS-T / Flask</span>
                         </div>
                     </div>
                 </article>
