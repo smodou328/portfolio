@@ -403,7 +403,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error(`Statut réseau HTTP: ${response.status}`);
                 }
 
-                const result = await response.json();
+                // Lecture résiliente du résultat (compatible JSON & texte FormSubmit)
+                let result = {};
+                try {
+                    const text = await response.text();
+                    try {
+                        result = JSON.parse(text);
+                    } catch (e) {
+                        if (response.ok || (typeof text === 'string' && text.toLowerCase().includes('success'))) {
+                            result = { success: 'true', message: 'The form was submitted successfully.' };
+                        } else {
+                            result = { success: 'false', message: text };
+                        }
+                    }
+                } catch (e) {
+                    if (response.ok) {
+                        result = { success: 'true', message: 'The form was submitted successfully.' };
+                    }
+                }
 
                 // Cas 1 : FormSubmit demande l'activation du formulaire (première utilisation)
                 if (result && result.message && result.message.toLowerCase().includes('activate')) {
@@ -415,6 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <em>Cette étape n'est requise qu'une seule fois. Une fois activé, tous les prochains messages arriveront directement dans votre boîte mail !</em>
                     `;
                     formFeedback.style.display = 'block';
+                    formFeedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     return;
                 }
 
@@ -424,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // Cas 3 : Envoi réussi confirmé
-                const isSuccess = result && (
+                const isSuccess = response.ok && (
                     result.success === 'true' || 
                     result.success === true || 
                     result.message === 'The form was submitted successfully.' ||
@@ -438,9 +456,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     formFeedback.className = 'form-feedback success';
                     formFeedback.innerHTML = `<i class='bx bx-check-circle'></i> <strong>Message envoyé avec succès !</strong><br>Merci ${safeFirstName ? safeFirstName + ' ' : ''}! Votre message a bien été transmis à <strong>Serigne Modou Lo</strong> (lo065657@gmail.com). Vous recevrez une réponse dans les plus brefs délais.`;
                     formFeedback.style.display = 'block';
+                    formFeedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    // Confirmation visuelle verte sur le bouton d'envoi
+                    if (submitBtn) {
+                        submitBtn.classList.add('btn-success-sent');
+                        submitBtn.innerHTML = "<i class='bx bx-check-double'></i> <span>Message Envoyé avec Succès !</span>";
+                    }
 
                     contactForm.reset();
                     fieldMappings.forEach(({ input, errorId }) => clearFieldError(input, errorId));
+
+                    // Rétablir le bouton après 5 secondes
+                    setTimeout(() => {
+                        if (submitBtn) {
+                            submitBtn.classList.remove('btn-success-sent');
+                            submitBtn.innerHTML = originalBtnHTML;
+                        }
+                    }, 5000);
 
                     // Masquer le bandeau de succès après 10s avec transition douce
                     setTimeout(() => {
@@ -471,9 +504,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <small style="display:block; margin-top:8px; color:#64748b;">Vos informations saisies sont conservées ci-dessous.</small>
                 `;
                 formFeedback.style.display = 'block';
+                formFeedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } finally {
                 isSubmitting = false;
-                if (submitBtn) {
+                if (submitBtn && !submitBtn.classList.contains('btn-success-sent')) {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalBtnHTML;
                 }

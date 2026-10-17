@@ -1630,6 +1630,13 @@ textarea.form-control {
     transform: none !important;
 }
 
+.btn-submit.btn-success-sent {
+    background: #10b981 !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
 /* --- Floating Back To Top Button --- */
 .back-to-top {
     position: fixed;
