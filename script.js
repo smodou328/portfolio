@@ -532,4 +532,467 @@ document.addEventListener('DOMContentLoaded', () => {
 
         progressBars.forEach(bar => observer.observe(bar));
     }
+
+    // 7. Modale Interactive Projet CrousSpace (Galerie & Détails)
+    const projectCard = document.getElementById('projectCrousspaceCard');
+    const modal = document.getElementById('crousspaceModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalDismissBtn = document.getElementById('modalDismissBtn');
+    const modalContactActionBtn = document.getElementById('modalContactActionBtn');
+    const openModalBtns = document.querySelectorAll('.open-crousspace-modal');
+
+    function openCrousspaceModal() {
+        if (!modal) return;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCrousspaceModal() {
+        if (!modal) return;
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (projectCard) {
+        projectCard.addEventListener('click', (e) => {
+            openCrousspaceModal();
+        });
+        projectCard.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openCrousspaceModal();
+            }
+        });
+    }
+
+    openModalBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openCrousspaceModal();
+        });
+    });
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeCrousspaceModal);
+    if (modalDismissBtn) modalDismissBtn.addEventListener('click', closeCrousspaceModal);
+
+    // Fermeture lors d'un clic en dehors de la boîte de dialogue
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeCrousspaceModal();
+            }
+        });
+    }
+
+    // Fermeture par touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            closeCrousspaceModal();
+        }
+    });
+
+    // Fermeture au clic sur le bouton de contact pour naviguer fluidement
+    if (modalContactActionBtn) {
+        modalContactActionBtn.addEventListener('click', () => {
+            closeCrousspaceModal();
+        });
+    }
+
+    // Sélecteur de la galerie d'images avec transition fluide
+    const modalViewerImg = document.getElementById('modalViewerImg');
+    const modalViewerCaption = document.getElementById('modalViewerCaption');
+    const thumbBtns = document.querySelectorAll('#modalGalleryThumbs .modal-thumb-btn');
+
+    thumbBtns.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const imgSrc = thumb.getAttribute('data-img');
+            const caption = thumb.getAttribute('data-caption');
+
+            if (modalViewerImg && imgSrc) {
+                modalViewerImg.style.opacity = '0.35';
+                setTimeout(() => {
+                    modalViewerImg.src = imgSrc;
+                    modalViewerImg.style.opacity = '1';
+                }, 140);
+            }
+
+            if (modalViewerCaption && caption) {
+                modalViewerCaption.innerHTML = `<i class='bx bx-image'></i> <span>${caption}</span>`;
+            }
+
+            thumbBtns.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
+
+    // 8. Modale Interactive Projet Portfolio Web & CV en Ligne
+    const portfolioCvCard = document.getElementById('projectPortfolioCvCard');
+    const portfolioCvModal = document.getElementById('portfolioCvModal');
+    const modalPortfolioCvCloseBtn = document.getElementById('modalPortfolioCvCloseBtn');
+    const modalPortfolioCvDismissBtn = document.getElementById('modalPortfolioCvDismissBtn');
+    const openPortfolioCvBtns = document.querySelectorAll('.open-portfolio-cv-modal');
+
+    function openPortfolioCvModal() {
+        if (!portfolioCvModal) return;
+        portfolioCvModal.classList.add('active');
+        portfolioCvModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePortfolioCvModal() {
+        if (!portfolioCvModal) return;
+        portfolioCvModal.classList.remove('active');
+        portfolioCvModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (portfolioCvCard) {
+        portfolioCvCard.addEventListener('click', () => {
+            openPortfolioCvModal();
+        });
+        portfolioCvCard.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openPortfolioCvModal();
+            }
+        });
+    }
+
+    openPortfolioCvBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openPortfolioCvModal();
+        });
+    });
+
+    if (modalPortfolioCvCloseBtn) modalPortfolioCvCloseBtn.addEventListener('click', closePortfolioCvModal);
+    if (modalPortfolioCvDismissBtn) modalPortfolioCvDismissBtn.addEventListener('click', closePortfolioCvModal);
+
+    // Fermeture par clic sur le backdrop
+    if (portfolioCvModal) {
+        portfolioCvModal.addEventListener('click', (e) => {
+            if (e.target === portfolioCvModal) {
+                closePortfolioCvModal();
+            }
+        });
+    }
+
+    // Fermeture par touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && portfolioCvModal && portfolioCvModal.classList.contains('active')) {
+            closePortfolioCvModal();
+        }
+    });
+
+    // Sélecteur de galerie d'images pour le portfolio & CV
+    const modalPortfolioCvViewerImg = document.getElementById('modalPortfolioCvViewerImg');
+    const modalPortfolioCvViewerCaption = document.getElementById('modalPortfolioCvViewerCaption');
+    const portfolioCvThumbBtns = document.querySelectorAll('#modalPortfolioCvThumbs .modal-thumb-btn');
+
+    portfolioCvThumbBtns.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const imgSrc = thumb.getAttribute('data-img');
+            const caption = thumb.getAttribute('data-caption');
+
+            if (modalPortfolioCvViewerImg && imgSrc) {
+                modalPortfolioCvViewerImg.style.opacity = '0.35';
+                setTimeout(() => {
+                    modalPortfolioCvViewerImg.src = imgSrc;
+                    modalPortfolioCvViewerImg.style.opacity = '1';
+                }, 140);
+            }
+
+            if (modalPortfolioCvViewerCaption && caption) {
+                modalPortfolioCvViewerCaption.innerHTML = `<i class='bx bx-image'></i> <span>${caption}</span>`;
+            }
+
+            portfolioCvThumbBtns.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
+
+    // 9. Modale Interactive Projet TEWNA — Écoles au Sénégal
+    const tewnaCard = document.getElementById('projectTewnaCard');
+    const tewnaModal = document.getElementById('tewnaModal');
+    const modalTewnaCloseBtn = document.getElementById('modalTewnaCloseBtn');
+    const modalTewnaDismissBtn = document.getElementById('modalTewnaDismissBtn');
+    const modalTewnaContactActionBtn = document.getElementById('modalTewnaContactActionBtn');
+    const openTewnaBtns = document.querySelectorAll('.open-tewna-modal');
+
+    function openTewnaModal() {
+        if (!tewnaModal) return;
+        tewnaModal.classList.add('active');
+        tewnaModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeTewnaModal() {
+        if (!tewnaModal) return;
+        tewnaModal.classList.remove('active');
+        tewnaModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (tewnaCard) {
+        tewnaCard.addEventListener('click', () => {
+            openTewnaModal();
+        });
+        tewnaCard.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openTewnaModal();
+            }
+        });
+    }
+
+    openTewnaBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openTewnaModal();
+        });
+    });
+
+    if (modalTewnaCloseBtn) modalTewnaCloseBtn.addEventListener('click', closeTewnaModal);
+    if (modalTewnaDismissBtn) modalTewnaDismissBtn.addEventListener('click', closeTewnaModal);
+    if (modalTewnaContactActionBtn) {
+        modalTewnaContactActionBtn.addEventListener('click', () => {
+            closeTewnaModal();
+        });
+    }
+
+    // Fermeture par clic sur le backdrop
+    if (tewnaModal) {
+        tewnaModal.addEventListener('click', (e) => {
+            if (e.target === tewnaModal) {
+                closeTewnaModal();
+            }
+        });
+    }
+
+    // Fermeture par touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && tewnaModal && tewnaModal.classList.contains('active')) {
+            closeTewnaModal();
+        }
+    });
+
+    // Sélecteur de galerie d'images pour le projet TEWNA
+    const modalTewnaViewerImg = document.getElementById('modalTewnaViewerImg');
+    const modalTewnaViewerCaption = document.getElementById('modalTewnaViewerCaption');
+    const tewnaThumbBtns = document.querySelectorAll('#modalTewnaThumbs .modal-thumb-btn');
+
+    tewnaThumbBtns.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const imgSrc = thumb.getAttribute('data-img');
+            const caption = thumb.getAttribute('data-caption');
+
+            if (modalTewnaViewerImg && imgSrc) {
+                modalTewnaViewerImg.style.opacity = '0.35';
+                setTimeout(() => {
+                    modalTewnaViewerImg.src = imgSrc;
+                    modalTewnaViewerImg.style.opacity = '1';
+                }, 140);
+            }
+
+            if (modalTewnaViewerCaption && caption) {
+                modalTewnaViewerCaption.innerHTML = `<i class='bx bx-image'></i> <span>${caption}</span>`;
+            }
+
+            tewnaThumbBtns.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
+
+    // 10. Modale Interactive Projet KAAY JANG — Écoles au Sénégal
+    const kaayjangCard = document.getElementById('projectKaayjangCard');
+    const kaayjangModal = document.getElementById('kaayjangModal');
+    const modalKaayjangCloseBtn = document.getElementById('modalKaayjangCloseBtn');
+    const modalKaayjangDismissBtn = document.getElementById('modalKaayjangDismissBtn');
+    const modalKaayjangContactActionBtn = document.getElementById('modalKaayjangContactActionBtn');
+    const openKaayjangBtns = document.querySelectorAll('.open-kaayjang-modal');
+
+    function openKaayjangModal() {
+        if (!kaayjangModal) return;
+        kaayjangModal.classList.add('active');
+        kaayjangModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeKaayjangModal() {
+        if (!kaayjangModal) return;
+        kaayjangModal.classList.remove('active');
+        kaayjangModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (kaayjangCard) {
+        kaayjangCard.addEventListener('click', () => {
+            openKaayjangModal();
+        });
+        kaayjangCard.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openKaayjangModal();
+            }
+        });
+    }
+
+    openKaayjangBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openKaayjangModal();
+        });
+    });
+
+    if (modalKaayjangCloseBtn) modalKaayjangCloseBtn.addEventListener('click', closeKaayjangModal);
+    if (modalKaayjangDismissBtn) modalKaayjangDismissBtn.addEventListener('click', closeKaayjangModal);
+    if (modalKaayjangContactActionBtn) {
+        modalKaayjangContactActionBtn.addEventListener('click', () => {
+            closeKaayjangModal();
+        });
+    }
+
+    // Fermeture par clic sur le backdrop
+    if (kaayjangModal) {
+        kaayjangModal.addEventListener('click', (e) => {
+            if (e.target === kaayjangModal) {
+                closeKaayjangModal();
+            }
+        });
+    }
+
+    // Fermeture par touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && kaayjangModal && kaayjangModal.classList.contains('active')) {
+            closeKaayjangModal();
+        }
+    });
+
+    // Sélecteur de galerie d'images pour le projet KAAY JANG
+    const modalKaayjangViewerImg = document.getElementById('modalKaayjangViewerImg');
+    const modalKaayjangViewerCaption = document.getElementById('modalKaayjangViewerCaption');
+    const kaayjangThumbBtns = document.querySelectorAll('#modalKaayjangThumbs .modal-thumb-btn');
+
+    kaayjangThumbBtns.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const imgSrc = thumb.getAttribute('data-img');
+            const caption = thumb.getAttribute('data-caption');
+
+            if (modalKaayjangViewerImg && imgSrc) {
+                modalKaayjangViewerImg.style.opacity = '0.35';
+                setTimeout(() => {
+                    modalKaayjangViewerImg.src = imgSrc;
+                    modalKaayjangViewerImg.style.opacity = '1';
+                }, 140);
+            }
+
+            if (modalKaayjangViewerCaption && caption) {
+                modalKaayjangViewerCaption.innerHTML = `<i class='bx bx-image'></i> <span>${caption}</span>`;
+            }
+
+            kaayjangThumbBtns.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
+
+    // 11. Modale Interactive Projet UNIV-SCHEDULER (Gestion des Salles & Emplois du Temps)
+    const univSchedulerCard = document.getElementById('projectUnivSchedulerCard');
+    const univSchedulerModal = document.getElementById('univSchedulerModal');
+    const modalUnivSchedulerCloseBtn = document.getElementById('modalUnivSchedulerCloseBtn');
+    const modalUnivSchedulerDismissBtn = document.getElementById('modalUnivSchedulerDismissBtn');
+    const modalUnivSchedulerContactActionBtn = document.getElementById('modalUnivSchedulerContactActionBtn');
+    const openUnivSchedulerBtns = document.querySelectorAll('.open-univscheduler-modal');
+
+    function openUnivSchedulerModal() {
+        if (!univSchedulerModal) return;
+        univSchedulerModal.classList.add('active');
+        univSchedulerModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeUnivSchedulerModal() {
+        if (!univSchedulerModal) return;
+        univSchedulerModal.classList.remove('active');
+        univSchedulerModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (univSchedulerCard) {
+        univSchedulerCard.addEventListener('click', () => {
+            openUnivSchedulerModal();
+        });
+        univSchedulerCard.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openUnivSchedulerModal();
+            }
+        });
+    }
+
+    openUnivSchedulerBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openUnivSchedulerModal();
+        });
+    });
+
+    if (modalUnivSchedulerCloseBtn) modalUnivSchedulerCloseBtn.addEventListener('click', closeUnivSchedulerModal);
+    if (modalUnivSchedulerDismissBtn) modalUnivSchedulerDismissBtn.addEventListener('click', closeUnivSchedulerModal);
+    if (modalUnivSchedulerContactActionBtn) {
+        modalUnivSchedulerContactActionBtn.addEventListener('click', () => {
+            closeUnivSchedulerModal();
+        });
+    }
+
+    // Fermeture par clic sur le backdrop
+    if (univSchedulerModal) {
+        univSchedulerModal.addEventListener('click', (e) => {
+            if (e.target === univSchedulerModal) {
+                closeUnivSchedulerModal();
+            }
+        });
+    }
+
+    // Fermeture par touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && univSchedulerModal && univSchedulerModal.classList.contains('active')) {
+            closeUnivSchedulerModal();
+        }
+    });
+
+    // Sélecteur de galerie d'images pour le projet UNIV-SCHEDULER
+    const modalUnivSchedulerViewerImg = document.getElementById('modalUnivSchedulerViewerImg');
+    const modalUnivSchedulerViewerCaption = document.getElementById('modalUnivSchedulerViewerCaption');
+    const univSchedulerThumbBtns = document.querySelectorAll('#modalUnivSchedulerThumbs .modal-thumb-btn');
+
+    univSchedulerThumbBtns.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const imgSrc = thumb.getAttribute('data-img');
+            const caption = thumb.getAttribute('data-caption');
+
+            if (modalUnivSchedulerViewerImg && imgSrc) {
+                modalUnivSchedulerViewerImg.style.opacity = '0.35';
+                setTimeout(() => {
+                    modalUnivSchedulerViewerImg.src = imgSrc;
+                    modalUnivSchedulerViewerImg.style.opacity = '1';
+                }, 140);
+            }
+
+            if (modalUnivSchedulerViewerCaption && caption) {
+                modalUnivSchedulerViewerCaption.innerHTML = `<i class='bx bx-image'></i> <span>${caption}</span>`;
+            }
+
+            univSchedulerThumbBtns.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
 });
+
+

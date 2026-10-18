@@ -765,62 +765,88 @@
             <!-- Projects Grid -->
             <div class="projects-grid">
                 <!-- Project 1: TEWNA -->
-                <article class="project-card" data-category="web">
-                    <div class="project-badge-top">
-                        <div class="project-badge-icon">
-                            <i class='bx bx-fingerprint'></i>
+                <article class="project-card clickable"
+                    id="projectTewnaCard"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Cliquer pour afficher les détails et les 3 captures du projet Application TEWNA"
+                    data-project="tewna"
+                    data-title="Application TEWNA — Écoles au Sénégal"
+                    data-category="web">
+                    <div class="project-thumb-wrap">
+                        <img src="./assets/projects/tewna/tewna-login.png" alt="Application TEWNA — Écoles au Sénégal" class="project-thumb-img" loading="lazy">
+                        <div class="project-thumb-overlay">
+                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 3 Captures • Cliquer</span>
                         </div>
                     </div>
                     <div class="project-body">
                         <div class="project-tags">
-                            <span class="project-tag">Laravel</span>
                             <span class="project-tag">React.js</span>
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">Tailwind CSS</span>
                             <span class="project-tag">API REST</span>
                         </div>
                         <h3 class="project-title">Application TEWNA — Écoles au Sénégal</h3>
                         <p class="project-desc">
-                            Développement de <strong>Tewna</strong>, application de pointage et de gestion de présence pour <em>Écoles au Sénégal</em>. Interface utilisateur en React, routes API et persistance avec Laravel.
+                            Développement de <strong>Tewna</strong>, application web & PWA de gestion du temps de travail et de présence multi-rôles pour l'organisation <em>Écoles au Sénégal</em>. Interface React / Vite, Clean Architecture modulaire, tokens d'authentification Sanctum et dashboard de supervision.
                         </p>
                         <div class="project-footer">
-                            <a href="#contact" class="project-link">
-                                Plus d'informations <i class='bx bx-right-arrow-alt'></i>
-                            </a>
-                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">Stage Professionnel</span>
+                            <button type="button" class="project-link open-tewna-modal" style="background:none; border:none; padding:0; cursor:pointer;" aria-label="Ouvrir la fenêtre détaillée du projet TEWNA">
+                                Voir les détails & captures <i class='bx bx-expand-alt'></i>
+                            </button>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);"><i class='bx bx-briefcase'></i> Stage Professionnel</span>
                         </div>
                     </div>
                 </article>
 
                 <!-- Project 2: KAAY JANG -->
-                <article class="project-card" data-category="web">
-                    <div class="project-badge-top">
-                        <div class="project-badge-icon">
-                            <i class='bx bx-book-open'></i>
+                <article class="project-card clickable"
+                    id="projectKaayjangCard"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Cliquer pour afficher les détails et les 4 captures du projet KAAY JANG"
+                    data-project="kaayjang"
+                    data-title="KAAY JANG — Écoles au Sénégal"
+                    data-category="web">
+                    <div class="project-thumb-wrap">
+                        <img src="./assets/projects/kaayjang/kaayjang-accueil.png" alt="KAAY JANG — Écoles au Sénégal" class="project-thumb-img" loading="lazy">
+                        <div class="project-thumb-overlay">
+                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 4 Captures • Cliquer</span>
                         </div>
                     </div>
                     <div class="project-body">
                         <div class="project-tags">
-                            <span class="project-tag">Plateforme Éducative</span>
-                            <span class="project-tag">Web</span>
-                            <span class="project-tag">En cours</span>
+                            <span class="project-tag">React 19</span>
+                            <span class="project-tag">Vite</span>
+                            <span class="project-tag">Tailwind CSS v4</span>
+                            <span class="project-tag">EdTech</span>
                         </div>
                         <h3 class="project-title">KAAY JANG — Écoles au Sénégal</h3>
                         <p class="project-desc">
-                            Contribution active à la plateforme éducative constituant la nouvelle version d'Écoles au Sénégal : espaces dédiés pour élèves, professeurs et équipes administratives.
+                            Contribution active à la refonte majeure de la plateforme éducative nationale <em>Écoles au Sénégal</em> : architecture frontend moderne en React 19 et Tailwind CSS v4, espaces personnalisés pour élèves, parents, enseignants et sponsors.
                         </p>
                         <div class="project-footer">
-                            <a href="#contact" class="project-link">
-                                Échanger sur ce projet <i class='bx bx-right-arrow-alt'></i>
-                            </a>
-                            <span style="font-size: 0.8rem; font-weight: 700; color: #16a34a;">Projet Actif</span>
+                            <button type="button" class="project-link open-kaayjang-modal" style="background:none; border:none; padding:0; cursor:pointer;" aria-label="Ouvrir la fenêtre détaillée du projet KAAY JANG">
+                                Voir les détails & captures <i class='bx bx-expand-alt'></i>
+                            </button>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: #16a34a;"><i class='bx bx-check-circle'></i> Projet Actif</span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Project 3: Salles Java -->
-                <article class="project-card" data-category="logiciel">
-                    <div class="project-badge-top">
-                        <div class="project-badge-icon">
-                            <i class='bx bxl-java'></i>
+                <!-- Project 3: Salles Java (UNIV-SCHEDULER) -->
+                <article class="project-card clickable"
+                    id="projectUnivSchedulerCard"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Cliquer pour afficher les détails et les 4 captures du projet Gestion des Salles & Emplois du Temps"
+                    data-project="univscheduler"
+                    data-title="UNIV-SCHEDULER — Gestion des Salles & Emplois du Temps"
+                    data-category="logiciel">
+                    <div class="project-thumb-wrap">
+                        <img src="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" alt="UNIV-SCHEDULER — Gestion des Salles & Emplois du Temps" class="project-thumb-img" loading="lazy">
+                        <div class="project-thumb-overlay">
+                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 4 Captures • Cliquer</span>
                         </div>
                     </div>
                     <div class="project-body">
@@ -828,16 +854,17 @@
                             <span class="project-tag">Java</span>
                             <span class="project-tag">JavaFX</span>
                             <span class="project-tag">POO</span>
+                            <span class="project-tag">MVC / DAO</span>
                         </div>
                         <h3 class="project-title">Gestion des Salles & Emplois du Temps</h3>
                         <p class="project-desc">
-                            Application logicielle desktop conçue en Java et JavaFX pour la planification, la réservation des salles de cours et l'organisation des emplois du temps universitaires.
+                            Application logicielle <strong>UNIV-SCHEDULER</strong> conçue en Java et JavaFX pour l'optimisation des espaces universitaires : tableaux de bord d'occupation en temps réel, assignation intelligente des salles et détection automatisée des conflits horaires.
                         </p>
                         <div class="project-footer">
-                            <a href="#contact" class="project-link">
-                                Voir détails <i class='bx bx-right-arrow-alt'></i>
-                            </a>
-                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-light);">Projet Universitaire</span>
+                            <button type="button" class="project-link open-univscheduler-modal" style="background:none; border:none; padding:0; cursor:pointer;" aria-label="Ouvrir la fenêtre détaillée du projet UNIV-SCHEDULER">
+                                Voir les détails & captures <i class='bx bx-expand-alt'></i>
+                            </button>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);"><i class='bx bxl-java'></i> Projet Universitaire</span>
                         </div>
                     </div>
                 </article>
@@ -869,47 +896,53 @@
                 </article>
 
                 <!-- Project 5: CV Interactif & Portfolio -->
-                <article class="project-card" data-category="web">
-                    <div class="project-badge-top">
-                        <div class="project-badge-icon">
-                            <i class='bx bx-laptop'></i>
+                <article class="project-card clickable" 
+                    id="projectPortfolioCvCard"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Cliquer pour afficher les détails et les 4 captures du Portfolio Web & CV en Ligne"
+                    data-category="web"
+                    data-project="portfolio-cv"
+                    data-title="Portfolio Web & CV en Ligne — Serigne Modou LO">
+                    <div class="project-thumb-wrap">
+                        <img src="./assets/projects/portfolio-cv/portfolio-hero.png" alt="Portfolio Web & CV en Ligne — Serigne Modou LO" class="project-thumb-img" loading="lazy">
+                        <div class="project-thumb-overlay">
+                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 4 Captures • Cliquer</span>
                         </div>
                     </div>
                     <div class="project-body">
                         <div class="project-tags">
-                            <span class="project-tag">HTML5</span>
-                            <span class="project-tag">CSS3</span>
-                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML5 Sémantique</span>
+                            <span class="project-tag">CSS3 Avancé</span>
+                            <span class="project-tag">JavaScript ES6+</span>
+                            <span class="project-tag">GitHub Pages</span>
                         </div>
                         <h3 class="project-title">Portfolio Web & CV en Ligne</h3>
                         <p class="project-desc">
-                            Conception de ce site personnel responsive aux couleurs Bleu & Blanc avec navigation fluide, CV numérique hébergé sur GitHub Pages et version A4 imprimable.
+                            Conception de ce site personnel responsive aux couleurs Bleu Royal & Blanc avec navigation fluide, CV numérique interactif hébergé sur GitHub Pages et version A4 imprimable.
                         </p>
                         <div class="project-footer">
-                            <a href="https://smodou328.github.io/cv-serigne-modou-lo/" target="_blank" rel="noopener" class="project-link">
-                                Ouvrir sur GitHub Pages <i class='bx bx-link-external'></i>
-                            </a>
+                            <button type="button" class="project-link open-portfolio-cv-modal" style="background:none; border:none; padding:0; cursor:pointer;" aria-label="Ouvrir la fenêtre détaillée du Portfolio & CV">
+                                Voir les détails & captures <i class='bx bx-expand-alt'></i>
+                            </button>
                             <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">En ligne</span>
                         </div>
                     </div>
                 </article>
 
                 <!-- Project 6: CrousSpace (Python Flask & SQLAlchemy) -->
-                <article class="project-card" 
+                <article class="project-card clickable" 
+                    id="projectCrousspaceCard"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Cliquer pour afficher les détails et les captures du projet CrousSpace"
                     data-category="web"
                     data-project="crousspace"
-                    data-title="CrousSpace — Système Intégré de Gestion des Locaux Universitaires (CROUS-T)"
-                    data-gallery='["./assets/projects/crousspace/crousspace-cover.png", "./assets/projects/crousspace/crousspace-portal.png", "./assets/projects/crousspace/crousspace-workflows.png", "./assets/projects/crousspace/crousspace-architecture.png"]'
-                    data-gallery-captions='["Vue d&apos;ensemble & Couverture officielle CROUS-T", "Portail Démo & Catalogue des locaux commerciaux (Multi-écrans)", "Workflows Métier : Attribution, Maintenance, QHSE & Paiements", "Architecture Logicielle Python Flask, SQLAlchemy & Sécurité RBAC"]'
-                    data-role="Analyse, Conception & Développement — Gestionnaire des interfaces Comptable & Administrateur (facturation des loyers/redevances, encaissements, émission des quittances de loyer, gestion RBAC des utilisateurs)."
-                    data-objectifs="Digitaliser et centraliser l'attribution des locaux universitaires, fiabiliser le recouvrement des redevances locatives et fluidifier le traitement des incidents techniques et d'hygiène QHSE."
-                    data-technologies="Python 3, Flask (Architecture MVC), SQLAlchemy ORM, SQLite & PostgreSQL, Tailwind CSS, Jinja2, Ngrok, Werkzeug/Bcrypt, Git / GitHub"
-                    data-challenges="Ségrégation stricte des privilèges d'accès via RBAC, génération automatisée de quittances comptables fiables et orchestration multi-rôles en temps réel."
-                    data-skills="Architecture logicielle Flask, modélisation ORM relationnelle, sécurité des sessions web, travail collaboratif Gitflow, tests d'intégration.">
+                    data-title="CrousSpace — Système Intégré de Gestion des Locaux Universitaires (CROUS-T)">
                     <div class="project-thumb-wrap">
                         <img src="./assets/projects/crousspace/crousspace-cover.png" alt="CrousSpace — Système Intégré de Gestion des Locaux Universitaires (CROUS-T)" class="project-thumb-img" loading="lazy">
                         <div class="project-thumb-overlay">
-                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 4 Captures</span>
+                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 4 Captures • Cliquer</span>
                         </div>
                     </div>
                     <div class="project-body">
@@ -924,9 +957,9 @@
                             Plateforme web intégrée dédiée à l'attribution, au suivi et à la maintenance des locaux universitaires du CROUS-T. Développement complet des modules <strong>Comptable & Administrateur</strong> : facturation des redevances, quittances automatiques et contrôle d'accès RBAC.
                         </p>
                         <div class="project-footer">
-                            <a href="#contact" class="project-link">
-                                Voir les détails <i class='bx bx-right-arrow-alt'></i>
-                            </a>
+                            <button type="button" class="project-link open-crousspace-modal" style="background:none; border:none; padding:0; cursor:pointer;" aria-label="Ouvrir la fenêtre détaillée du projet CrousSpace">
+                                Voir les détails & captures <i class='bx bx-expand-alt'></i>
+                            </button>
                             <span class="project-status-badge"><i class='bx bxl-python'></i> CROUS-T / Flask</span>
                         </div>
                     </div>
@@ -1148,6 +1181,789 @@
         </div>
     </section>
 
+    <!-- =========================================================================
+         Modal Détails & Galerie Projet CrousSpace (CROUS-T / Flask)
+         ========================================================================= -->
+    <div class="project-modal-backdrop" id="crousspaceModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+        <div class="project-modal-dialog">
+            <!-- Bouton Fermeture -->
+            <button type="button" class="project-modal-close" id="modalCloseBtn" aria-label="Fermer la fenêtre modale">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <!-- En-tête de la modale -->
+            <div class="project-modal-header">
+                <div class="project-modal-badge">
+                    <i class='bx bxl-python'></i> Python / Flask & CROUS-T (UIDT)
+                </div>
+                <h2 class="project-modal-title" id="modalProjectTitle">
+                    CrousSpace — Gestion des Locaux & Espaces Commerciaux (CROUS-T)
+                </h2>
+                <p class="project-modal-subtitle">
+                    Plateforme Web Intégrée d'Attribution, de Suivi des Espaces et de Gestion Comptable pour le Centre Régional des Œuvres Universitaires de Thiès.
+                </p>
+            </div>
+
+            <!-- Galerie d'images 16:9 avec aperçu principal et miniatures -->
+            <div class="project-modal-gallery">
+                <div class="modal-gallery-main-wrap">
+                    <img id="modalViewerImg" src="./assets/projects/crousspace/crousspace-portal.png" alt="Aperçu CrousSpace" class="modal-gallery-main-img">
+                    <div class="modal-gallery-caption" id="modalViewerCaption">
+                        <i class='bx bx-image'></i> <span>Portail Web Démo & Maquettes Multi-écrans (Catalogue des cantines & locaux sur PC et mobile)</span>
+                    </div>
+                </div>
+
+                <!-- 4 Miniatures sélectionnables -->
+                <div class="modal-gallery-thumbs" id="modalGalleryThumbs">
+                    <button type="button" class="modal-thumb-btn active" data-img="./assets/projects/crousspace/crousspace-portal.png" data-caption="Portail Web Démo & Maquettes Multi-écrans (Catalogue des cantines & locaux sur PC et mobile)" title="Portail Démo & Catalogue">
+                        <img src="./assets/projects/crousspace/crousspace-portal.png" alt="Portail Démo CrousSpace">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/crousspace/crousspace-workflows.png" data-caption="Workflows Métier : Attribution des locaux, Maintenance technique, Contrôle QHSE et Facturation / Quittances" title="Workflows & Paiements">
+                        <img src="./assets/projects/crousspace/crousspace-workflows.png" alt="Workflows CrousSpace">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/crousspace/crousspace-architecture.png" data-caption="Architecture Technique : Python Flask MVC, ORM SQLAlchemy, Tailwind CSS et Contrôle d'Accès RBAC" title="Architecture Flask & Sécurité">
+                        <img src="./assets/projects/crousspace/crousspace-architecture.png" alt="Architecture CrousSpace">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/crousspace/crousspace-cover.png" data-caption="Vue d'ensemble officielle CROUS-T & Identité visuelle du projet" title="Couverture Officielle CROUS-T">
+                        <img src="./assets/projects/crousspace/crousspace-cover.png" alt="Couverture CROUS-T">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Corps détaillé du projet -->
+            <div class="project-modal-body">
+                <!-- 1. Ce que j'ai réalisé (Mon Rôle & Tâches) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-briefcase text-blue'></i> Mon Rôle & Ce que j'ai réalisé
+                    </h3>
+                    <div class="modal-detail-text">
+                        <p>
+                            Au sein d'une équipe de développement pluridisciplinaire en Licence 3 Génie Logiciel, j'ai assuré l'analyse, la modélisation et le développement complet des <strong>interfaces Comptable & Administrateur</strong> du système CROUS-T :
+                        </p>
+                        <ul class="modal-tasks-list">
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Module de Facturation des Locaux Commerciaux :</strong> Conception du moteur d'échéances pour générer automatiquement les appels de redevances locatives mensuelles pour l'ensemble des exploitants du campus (cantines universitaires, cafétérias, boutiques, kiosques et cybercafés).
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Génération Automatisée des Quittances de Loyer :</strong> Mise en place du module d'émission instantanée des reçus et quittances libératoires officielles en PDF après chaque validation d'encaissement.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Gestion de la Trésorerie & Recouvrement des Impayés :</strong> Élaboration du tableau de bord comptable avec détection proactive des retards de paiement, alertes d'échéances et traçabilité des règlements par Mobile Money et PayTech.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Module d'Administration Générale & RBAC :</strong> Supervision centralisée des comptes utilisateurs (étudiants demandeurs, chefs de maintenance, agents QHSE, direction générale) avec vérification stricte des permissions sur chaque route Flask.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Ce que j'en ai appris (Compétences & Retours d'expérience) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-brain text-blue'></i> Ce que j'en ai appris & Compétences Renforcées
+                    </h3>
+                    <div class="modal-skills-grid">
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-python'></i> Architecture Flask & ORM
+                            </div>
+                            <p>Structuration modulaire MVC avec Flask Blueprints, modélisation de schémas relationnels avancés sous SQLAlchemy (clés étrangères, contraintes d'intégrité, migrations Alembic).</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-shield-quarter'></i> Sécurité & Contrôle d'Accès RBAC
+                            </div>
+                            <p>Protection contre les vulnérabilités web, hachage robuste des mots de passe (Werkzeug/Bcrypt), isolation hermétique des sessions et décorateurs d'autorisation par rôle.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-git-repo-forked'></i> Méthodologie Gitflow en Équipe
+                            </div>
+                            <p>Collaboration multi-développeurs sur GitHub : gestion des branches, revues de code systématiques, résolution de conflits et commits conformes aux standards professionnels.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-file-blank'></i> Modélisation de Règles Métier
+                            </div>
+                            <p>Traduction fidèle des procédures administratives et financières du CROUS en code informatique fiable (conventions d'occupation, baux commerciaux, quittances opposables).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Stack Technique & Liens -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-code-alt text-blue'></i> Environnement Technique & Technologies
+                    </h3>
+                    <div class="modal-tech-tags">
+                        <span class="modal-tech-tag"><i class='bx bxl-python'></i> Python 3</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-flask'></i> Flask MVC</span>
+                        <span class="modal-tech-tag"><i class='bx bx-data'></i> SQLAlchemy ORM</span>
+                        <span class="modal-tech-tag"><i class='bx bxs-data'></i> SQLite & PostgreSQL</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-tailwind-css'></i> Tailwind CSS</span>
+                        <span class="modal-tech-tag"><i class='bx bx-layout'></i> Jinja2 Templates</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-git'></i> Git / GitHub</span>
+                        <span class="modal-tech-tag"><i class='bx bx-lock-alt'></i> RBAC & Sessions</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pied de la modale avec actions -->
+            <div class="project-modal-footer">
+                <button type="button" class="btn btn-secondary" id="modalDismissBtn">
+                    <i class='bx bx-x'></i> Fermer
+                </button>
+                <a href="#contact" class="btn btn-primary" id="modalContactActionBtn">
+                    <i class='bx bx-envelope'></i> Échanger sur ce projet
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         Modal Détails & Galerie Projet Portfolio Web & CV en Ligne
+         ========================================================================= -->
+    <div class="project-modal-backdrop" id="portfolioCvModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalPortfolioCvTitle">
+        <div class="project-modal-dialog">
+            <!-- Bouton Fermeture -->
+            <button type="button" class="project-modal-close" id="modalPortfolioCvCloseBtn" aria-label="Fermer la fenêtre modale">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <!-- En-tête de la modale -->
+            <div class="project-modal-header">
+                <div class="project-modal-badge">
+                    <i class='bx bx-laptop'></i> HTML5 • CSS3 • JavaScript • GitHub Pages
+                </div>
+                <h2 class="project-modal-title" id="modalPortfolioCvTitle">
+                    Portfolio Web & CV Numérique en Ligne
+                </h2>
+                <p class="project-modal-subtitle">
+                    Plateforme personnelle responsive, vitrine professionnelle et curriculum vitae interactif avec version A4 imprimable, hébergés sur GitHub Pages.
+                </p>
+            </div>
+
+            <!-- Galerie d'images 16:9 avec aperçu principal et miniatures -->
+            <div class="project-modal-gallery">
+                <div class="modal-gallery-main-wrap">
+                    <img id="modalPortfolioCvViewerImg" src="./assets/projects/portfolio-cv/portfolio-hero.png" alt="Page d'accueil du Portfolio" class="modal-gallery-main-img">
+                    <div class="modal-gallery-caption" id="modalPortfolioCvViewerCaption">
+                        <i class='bx bx-image'></i> <span>Page d'Accueil & Hero Banner — Identité visuelle, typographie soignée et navigation responsive</span>
+                    </div>
+                </div>
+
+                <!-- 4 Miniatures sélectionnables -->
+                <div class="modal-gallery-thumbs" id="modalPortfolioCvThumbs">
+                    <button type="button" class="modal-thumb-btn active" data-img="./assets/projects/portfolio-cv/portfolio-hero.png" data-caption="Page d'Accueil & Hero Banner — Identité visuelle, typographie soignée et navigation responsive" title="Accueil Portfolio">
+                        <img src="./assets/projects/portfolio-cv/portfolio-hero.png" alt="Accueil Portfolio">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/portfolio-cv/cv-numerique.png" data-caption="CV Numérique Interactif — Parcours universitaire, coordonnées et version optimisée pour l'impression A4" title="CV en Ligne">
+                        <img src="./assets/projects/portfolio-cv/cv-numerique.png" alt="CV en Ligne">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/portfolio-cv/portfolio-competences.png" data-caption="Compétences Techniques & Certifications — Badges officiels avec liens de vérification en ligne" title="Compétences & Certifications">
+                        <img src="./assets/projects/portfolio-cv/portfolio-competences.png" alt="Compétences & Certifications">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/portfolio-cv/portfolio-contact.png" data-caption="Formulaire de Contact Fonctionnel — Validation en temps réel, anti-spam et passerelles directes WhatsApp & Email" title="Formulaire de Contact">
+                        <img src="./assets/projects/portfolio-cv/portfolio-contact.png" alt="Formulaire de Contact">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Corps détaillé du projet -->
+            <div class="project-modal-body">
+                <!-- 1. Ce que j'ai réalisé -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-briefcase text-blue'></i> Mon Rôle & Ce que j'ai réalisé
+                    </h3>
+                    <div class="modal-detail-text">
+                        <p>
+                            Conception et développement complet de ma vitrine numérique personnelle et de mon CV en ligne :
+                        </p>
+                        <ul class="modal-tasks-list">
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Design System Sur-Mesure & UI/UX Moderne :</strong> Élaboration d'une charte graphique soignée aux couleurs Bleu Royal & Blanc Épuré, typographie Google Fonts équilibrée (Plus Jakarta Sans & Poppins), glassmorphism et micro-interactions fluides.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>CV Numérique Interactif & Print-Ready (A4) :</strong> Développement d'une page CV dédiée (`cv.html`) respectant les normes de mise en page internationales, avec boutons d'impression directe et styles CSS print `@media print` parfaitement calibrés pour les recruteurs.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Section Certifications Vérifiables :</strong> Intégration de badges officiels avec liens directs et sécurisés vers les attestations numériques authentifiées.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Formulaire de Contact Sécurisé & Multi-Canal :</strong> Implémentation d'une validation dynamique côté client, protection anti-spam, gestion des états asynchrones et repli automatique vers WhatsApp et client e-mail en cas d'incident réseau.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Déploiement Continu & Performance :</strong> Hébergement sur GitHub Pages avec gestion du cache CDN, balises méta Open Graph pour le partage social et score de performance optimal.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Ce que j'en ai appris -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-brain text-blue'></i> Ce que j'en ai appris & Compétences Renforcées
+                    </h3>
+                    <div class="modal-skills-grid">
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-css3'></i> Vanilla CSS Moderne & Responsive
+                            </div>
+                            <p>Maîtrise approfondie des CSS Custom Properties (variables), CSS Grid, Flexbox avancé, transitions cubic-bezier et adaptation mobile sans dépendance externe.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-javascript'></i> JavaScript ES6+ & DOM APIs
+                            </div>
+                            <p>Utilisation de l'API IntersectionObserver pour les animations d'apparition, Fetch API asynchrone avec gestion robuste des erreurs et manipulation dynamique du DOM.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-printer'></i> Feuilles de Styles d'Impression (CSS Paged Media)
+                            </div>
+                            <p>Calibration fine des règles `@page` et `@media print` pour garantir un rendu papier A4 élégant et condensé en une seule page imprimable.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-github'></i> Déploiement Web & Versioning
+                            </div>
+                            <p>Pratique des workflows de livraison continue via GitHub Pages, structuration des dossiers de production et contrôle de version avec Git.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Stack Technique -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-code-alt text-blue'></i> Technologies & Outils
+                    </h3>
+                    <div class="modal-tech-tags">
+                        <span class="modal-tech-tag"><i class='bx bxl-html5'></i> HTML5 Sémantique</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-css3'></i> Vanilla CSS3</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-javascript'></i> JavaScript Vanilla</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-github'></i> GitHub Pages</span>
+                        <span class="modal-tech-tag"><i class='bx bx-devices'></i> Responsive Web Design</span>
+                        <span class="modal-tech-tag"><i class='bx bx-printer'></i> Styles A4 Print</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pied de la modale avec actions -->
+            <div class="project-modal-footer">
+                <button type="button" class="btn btn-secondary" id="modalPortfolioCvDismissBtn">
+                    <i class='bx bx-x'></i> Fermer
+                </button>
+                <a href="https://smodou328.github.io/cv-serigne-modou-lo/" target="_blank" rel="noopener" class="btn btn-primary" id="modalPortfolioCvOpenLinkBtn">
+                    <i class='bx bx-link-external'></i> Ouvrir le CV sur GitHub Pages
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         Modal Détails & Galerie Projet TEWNA (Écoles au Sénégal)
+         ========================================================================= -->
+    <div class="project-modal-backdrop" id="tewnaModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTewnaTitle">
+        <div class="project-modal-dialog">
+            <!-- Bouton Fermeture -->
+            <button type="button" class="project-modal-close" id="modalTewnaCloseBtn" aria-label="Fermer la fenêtre modale">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <!-- En-tête de la modale -->
+            <div class="project-modal-header">
+                <div class="project-modal-badge">
+                    <i class='bx bx-fingerprint'></i> React.js • Laravel • PWA • Clean Architecture
+                </div>
+                <h2 class="project-modal-title" id="modalTewnaTitle">
+                    Application TEWNA — Écoles au Sénégal
+                </h2>
+                <p class="project-modal-subtitle">
+                    Plateforme web & PWA de gestion du temps de travail, émargement des cours en temps réel, géolocalisation et supervision des présences scolaires.
+                </p>
+            </div>
+
+            <!-- Galerie d'images 16:9 avec aperçu principal et miniatures -->
+            <div class="project-modal-gallery">
+                <div class="modal-gallery-main-wrap">
+                    <img id="modalTewnaViewerImg" src="./assets/projects/tewna/tewna-login.png" alt="Portail de connexion TEWNA Pointage" class="modal-gallery-main-img">
+                    <div class="modal-gallery-caption" id="modalTewnaViewerCaption">
+                        <i class='bx bx-image'></i> <span>Portail d'Authentification Sécurisé & Identité Écoles au Sénégal — Connexion multi-rôles & design épuré</span>
+                    </div>
+                </div>
+
+                <!-- 3 Miniatures sélectionnables -->
+                <div class="modal-gallery-thumbs" id="modalTewnaThumbs">
+                    <button type="button" class="modal-thumb-btn active" data-img="./assets/projects/tewna/tewna-login.png" data-caption="Portail d'Authentification Sécurisé & Identité Écoles au Sénégal — Connexion multi-rôles & design épuré" title="Portail Authentification">
+                        <img src="./assets/projects/tewna/tewna-login.png" alt="Portail Authentification TEWNA">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/tewna/tewna-dashboard.png" data-caption="Tableau de Bord Directeur — KPIs effectifs, Répartition des statuts (Donut) & Présences par département" title="Dashboard Directeur">
+                        <img src="./assets/projects/tewna/tewna-dashboard.png" alt="Dashboard Directeur TEWNA">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/tewna/tewna-professeur.png" data-caption="Espace Pédagogique — Pointage de séance en direct, géolocalisation sur site & accès au Cahier de texte numérique" title="Espace Professeur">
+                        <img src="./assets/projects/tewna/tewna-professeur.png" alt="Espace Professeur TEWNA">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Corps détaillé du projet -->
+            <div class="project-modal-body">
+                <!-- 1. Ce que j'ai réalisé (Mon Rôle & Tâches) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-briefcase text-blue'></i> Mon Rôle & Ce que j'ai réalisé
+                    </h3>
+                    <div class="modal-detail-text">
+                        <p>
+                            En tant que <strong>Développeur au Pôle Technique</strong> durant mon stage professionnel chez <em>Écoles au Sénégal</em>, j'ai participé activement à la conception et au développement de la solution complète <strong>TEWNA</strong> :
+                        </p>
+                        <ul class="modal-tasks-list">
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Conception UI/UX & Prototypage :</strong> Analyse approfondie du cahier des charges fonctionnel, élaboration des maquettes ergonomiques et du Design System sous Figma respectant la charte visuelle d'Écoles au Sénégal.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Développement Frontend React & Clean Architecture :</strong> Implémentation d'une Single Page Application (SPA) avec Vite et Tailwind CSS, organisée selon les principes de la Clean Architecture (`features/`, `usecases`, `api`, `components/ui`).
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Module de Pointage Pédagogique & Géolocalisation :</strong> Développement du mécanisme d'émargement conditionnel pour les enseignants (validation des créneaux horaires, contrôle de présence sur site par coordonnées GPS et QR code).
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Tableaux de Bord & Dataviz Temps Réel :</strong> Construction des dashboards interactifs pour la Direction et les RH avec indicateurs clés (taux de présence, retards, congés) et graphiques analytiques dynamiques (Recharts).
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Intégration API REST & Sécurité Sanctum :</strong> Consommation fluide des endpoints backend Laravel avec persistance des sessions sécurisées via tokens Sanctum et gestion fine des permissions RBAC.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Ce que j'en ai appris (Compétences & Retours d'expérience) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-brain text-blue'></i> Ce que j'en ai appris & Compétences Renforcées
+                    </h3>
+                    <div class="modal-skills-grid">
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-react'></i> Architecture Frontend Robuste
+                            </div>
+                            <p>Découplage strict entre couche de présentation UI, logique métier (Use Cases) et couche d'accès réseau avec Axios et React Router.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-tailwind-css'></i> Tailwind CSS & Ergonomie PWA
+                            </div>
+                            <p>Création d'un système de design unifié, composants réutilisables accessibles (WAI-ARIA) et configuration PWA pour mobile et desktop.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-shield-alt-2'></i> Sécurité & Authentification REST
+                            </div>
+                            <p>Gestion sécurisée des jetons d'accès Sanctum, intercepteurs HTTP pour le renouvellement de session et gardes de routes par rôle.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-group'></i> Rigueur Professionnelle en Entreprise
+                            </div>
+                            <p>Immersion en environnement de production agile chez Écoles au Sénégal, communication technique efficace et respect scrupuleux du cahier des charges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Stack Technique -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-code-alt text-blue'></i> Technologies & Outils
+                    </h3>
+                    <div class="modal-tech-tags">
+                        <span class="modal-tech-tag"><i class='bx bxl-react'></i> React.js</span>
+                        <span class="modal-tech-tag"><i class='bx bx-bolt-circle'></i> Vite</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-tailwind-css'></i> Tailwind CSS</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-javascript'></i> JavaScript ES6+</span>
+                        <span class="modal-tech-tag"><i class='bx bx-server'></i> API REST</span>
+                        <span class="modal-tech-tag"><i class='bx bx-lock-alt'></i> Laravel Sanctum</span>
+                        <span class="modal-tech-tag"><i class='bx bx-map-pin'></i> Géolocalisation GPS</span>
+                        <span class="modal-tech-tag"><i class='bx bx-mobile'></i> PWA (Progressive Web App)</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-git'></i> Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pied de la modale avec actions -->
+            <div class="project-modal-footer">
+                <button type="button" class="btn btn-secondary" id="modalTewnaDismissBtn">
+                    <i class='bx bx-x'></i> Fermer
+                </button>
+                <a href="#contact" class="btn btn-primary" id="modalTewnaContactActionBtn">
+                    <i class='bx bx-envelope'></i> Échanger sur ce projet
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         Modal Détails & Galerie Projet KAAY JANG (Écoles au Sénégal)
+         ========================================================================= -->
+    <div class="project-modal-backdrop" id="kaayjangModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalKaayjangTitle">
+        <div class="project-modal-dialog">
+            <!-- Bouton Fermeture -->
+            <button type="button" class="project-modal-close" id="modalKaayjangCloseBtn" aria-label="Fermer la fenêtre modale">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <!-- En-tête de la modale -->
+            <div class="project-modal-header">
+                <div class="project-modal-badge">
+                    <i class='bx bx-book-open'></i> React 19 • Vite • Tailwind CSS v4 • EdTech Sénégal
+                </div>
+                <h2 class="project-modal-title" id="modalKaayjangTitle">
+                    KAAY JANG — Écoles au Sénégal
+                </h2>
+                <p class="project-modal-subtitle">
+                    Nouvelle génération de la plateforme nationale d'éducation en ligne : apprentissage numérique du CI à la Terminale, cours vidéo interactifs, suivi personnalisé et intégration des paiements mobiles locaux.
+                </p>
+            </div>
+
+            <!-- Galerie d'images 16:9 avec aperçu principal et miniatures -->
+            <div class="project-modal-gallery">
+                <div class="modal-gallery-main-wrap">
+                    <img id="modalKaayjangViewerImg" src="./assets/projects/kaayjang/kaayjang-accueil.png" alt="Vitrine d'accueil KAAY JANG" class="modal-gallery-main-img">
+                    <div class="modal-gallery-caption" id="modalKaayjangViewerCaption">
+                        <i class='bx bx-image'></i> <span>Vitrine Principale & Mission Nationale — Valorisation de l'apprentissage numérique avec le programme officiel sénégalais</span>
+                    </div>
+                </div>
+
+                <!-- 4 Miniatures sélectionnables -->
+                <div class="modal-gallery-thumbs" id="modalKaayjangThumbs">
+                    <button type="button" class="modal-thumb-btn active" data-img="./assets/projects/kaayjang/kaayjang-accueil.png" data-caption="Vitrine Principale & Mission Nationale — Valorisation de l'apprentissage numérique avec le programme officiel sénégalais" title="Vitrine & Accueil">
+                        <img src="./assets/projects/kaayjang/kaayjang-accueil.png" alt="Vitrine Accueil KAAY JANG">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/kaayjang/kaayjang-espaces.png" data-caption="Architecture Multi-Espaces — Portails sur-mesure pour Élèves (cours & quiz), Parents (suivi), Professeurs et Sponsors" title="Architecture Multi-Espaces">
+                        <img src="./assets/projects/kaayjang/kaayjang-espaces.png" alt="Espaces Multi-Utilisateurs">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/kaayjang/kaayjang-connexion.png" data-caption="Portail d'Authentification Sécurisé — Interface de connexion responsive adaptée aux formats de numéros sénégalais" title="Connexion & Rôles">
+                        <img src="./assets/projects/kaayjang/kaayjang-connexion.png" alt="Portail de Connexion">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/kaayjang/kaayjang-tarifs.png" data-caption="Formules Pass & Abonnements — Modèle accessible sans engagement avec paiements mobile money intégrés (Wave, Orange Money)" title="Tarifs & Pass">
+                        <img src="./assets/projects/kaayjang/kaayjang-tarifs.png" alt="Tarifs & Souscriptions">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Corps détaillé du projet -->
+            <div class="project-modal-body">
+                <!-- 1. Ce que j'ai réalisé (Mon Rôle & Tâches) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-briefcase text-blue'></i> Mon Rôle & Ce que j'ai réalisé
+                    </h3>
+                    <div class="modal-detail-text">
+                        <p>
+                            Au sein du pôle technique pour le projet phare d'<strong>Écoles au Sénégal</strong>, j'ai participé activement au développement frontend de la nouvelle version de la plateforme <strong>KAAY JANG</strong> :
+                        </p>
+                        <ul class="modal-tasks-list">
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Développement Frontend React 19 & Vite :</strong> Construction d'une application réactive et performante tirant parti des nouveautés de React 19, avec un chargement asynchrone des composants (code splitting granulaire) pour optimiser la bande passante.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Design System Moderne avec Tailwind CSS v4 :</strong> Création d'une charte graphique immersive aux accents patriotiques sénégalais (vert, jaune, rouge), ergonomique, accessible et pensée mobile-first pour les élèves et parents.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Expérience Utilisateur & Formulaires Intelligents :</strong> Développement de modules de saisie avec masquage dynamique, validation automatique des numéros de téléphone locaux (+221) et gestion fine des messages d'erreur.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Cloisonnement & Navigation Multi-Espaces :</strong> Participation à l'organisation des routes et interfaces dédiées : Espace Élève (apprentissage, quiz), Espace Parent (suivi de progression) et Espace Sponsor / Institutionnel.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Ce que j'en ai appris (Compétences & Retours d'expérience) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-brain text-blue'></i> Ce que j'en ai appris & Compétences Renforcées
+                    </h3>
+                    <div class="modal-skills-grid">
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-react'></i> Écosystème React 19 & Vite
+                            </div>
+                            <p>Apprentissage approfondi des paradigmes modernes de React 19, gestion modulaire des états par contexte et optimisation extrême de l'asset bundling avec Vite.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-tailwind-css'></i> Tailwind CSS v4 & Ergonomie Mobile
+                            </div>
+                            <p>Maîtrise du nouveau moteur CSS, conteneurs requêtes (@container), typographie fluide et design adaptatif pour smartphones à connectivité limitée.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-graduation'></i> Impact EdTech & Réalités Locales
+                            </div>
+                            <p>Compréhension des besoins concrets des élèves sénégalais : clarté de navigation, accessibilité sans friction et intégration des habitudes de paiement par Mobile Money.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-git-branch'></i> Collaboration & Méthodes Agiles
+                            </div>
+                            <p>Pratique des revues de code, audits UX/UI continus, respect des conventions d'architecture logicielle et gestion de versions collaborative avec Git.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Stack Technique -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-code-alt text-blue'></i> Technologies & Outils
+                    </h3>
+                    <div class="modal-tech-tags">
+                        <span class="modal-tech-tag"><i class='bx bxl-react'></i> React 19</span>
+                        <span class="modal-tech-tag"><i class='bx bx-bolt-circle'></i> Vite</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-tailwind-css'></i> Tailwind CSS v4</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-javascript'></i> JavaScript ES6+</span>
+                        <span class="modal-tech-tag"><i class='bx bx-layer'></i> React Router DOM</span>
+                        <span class="modal-tech-tag"><i class='bx bx-pie-chart-alt-2'></i> Recharts / Dataviz</span>
+                        <span class="modal-tech-tag"><i class='bx bx-mobile-alt'></i> Responsive & PWA</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-git'></i> Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pied de la modale avec actions -->
+            <div class="project-modal-footer">
+                <button type="button" class="btn btn-secondary" id="modalKaayjangDismissBtn">
+                    <i class='bx bx-x'></i> Fermer
+                </button>
+                <a href="#contact" class="btn btn-primary" id="modalKaayjangContactActionBtn">
+                    <i class='bx bx-envelope'></i> Échanger sur ce projet
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         Modal Détails & Galerie Projet UNIV-SCHEDULER (Java & JavaFX)
+         ========================================================================= -->
+    <div class="project-modal-backdrop" id="univSchedulerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalUnivSchedulerTitle">
+        <div class="project-modal-dialog">
+            <!-- Bouton Fermeture -->
+            <button type="button" class="project-modal-close" id="modalUnivSchedulerCloseBtn" aria-label="Fermer la fenêtre modale">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <!-- En-tête de la modale -->
+            <div class="project-modal-header">
+                <div class="project-modal-badge">
+                    <i class='bx bxl-java'></i> Java 17/21 • JavaFX • FXML • POO & MVC • SQLite / MySQL
+                </div>
+                <h2 class="project-modal-title" id="modalUnivSchedulerTitle">
+                    Gestion des Salles & Emplois du Temps (UNIV-SCHEDULER)
+                </h2>
+                <p class="project-modal-subtitle">
+                    Application logicielle d'ordonnancement universitaire et d'optimisation des locaux : détection automatique des chevauchements horaires, gestion multi-rôles et supervision temps réel de l'occupation des salles.
+                </p>
+            </div>
+
+            <!-- Galerie d'images 16:9 avec aperçu principal et miniatures -->
+            <div class="project-modal-gallery">
+                <div class="modal-gallery-main-wrap">
+                    <img id="modalUnivSchedulerViewerImg" src="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" alt="Tableau de bord UNIV-SCHEDULER" class="modal-gallery-main-img">
+                    <div class="modal-gallery-caption" id="modalUnivSchedulerViewerCaption">
+                        <i class='bx bx-image'></i> <span>Tableau de Bord Gestionnaire — KPIs d'occupation des 38 salles, jauges circulaires, répartition des cours & analyse IA</span>
+                    </div>
+                </div>
+
+                <!-- 4 Miniatures sélectionnables -->
+                <div class="modal-gallery-thumbs" id="modalUnivSchedulerThumbs">
+                    <button type="button" class="modal-thumb-btn active" data-img="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" data-caption="Tableau de Bord Gestionnaire — KPIs d'occupation des 38 salles, jauges circulaires, répartition des cours & analyse IA" title="Tableau de Bord & KPIs">
+                        <img src="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" alt="Dashboard UNIV-SCHEDULER">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/univ-scheduler/univ-scheduler-edt.png" data-caption="Planification des Séances & Détection de Conflits — Attribution intelligente des créneaux horaires, suivi de statut et vérification d'indisponibilité" title="Emploi du Temps & Conflits">
+                        <img src="./assets/projects/univ-scheduler/univ-scheduler-edt.png" alt="Planification des Cours">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/univ-scheduler/univ-scheduler-portal.png" data-caption="Portail d'Accès Multi-Acteurs — Authentification sécurisée et espaces personnalisés pour Administrateur, Gestionnaire EDT, Enseignant et Étudiant" title="Portail Multi-Rôles">
+                        <img src="./assets/projects/univ-scheduler/univ-scheduler-portal.png" alt="Portail Multi-Acteurs">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/univ-scheduler/univ-scheduler-architecture.png" data-caption="Modélisation Orientée Objet (POO) — Diagramme de classes UML complet : hiérarchie d'héritage Utilisateur, classes métier, DAO et services" title="Architecture UML & POO">
+                        <img src="./assets/projects/univ-scheduler/univ-scheduler-architecture.png" alt="Architecture UML Classes">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Corps détaillé du projet -->
+            <div class="project-modal-body">
+                <!-- 1. Ce que j'ai réalisé (Mon Rôle & Tâches) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-briefcase text-blue'></i> Mon Rôle & Ce que j'ai réalisé
+                    </h3>
+                    <div class="modal-detail-text">
+                        <p>
+                            Dans le cadre de ce projet de génie logiciel en <strong>Java / JavaFX</strong>, j'ai assuré la modélisation complète, la conception algorithmique et l'implémentation de la solution <strong>UNIV-SCHEDULER</strong> :
+                        </p>
+                        <ul class="modal-tasks-list">
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Modélisation Logicielle & Diagrammes UML :</strong> Élaboration du Diagramme de Classes et du Modèle Conceptuel de Données (MCD) avec héritage polymorphique (`Utilisateur` → `Administrateur`, `Gestionnaire`, `Enseignant`, `Etudiant`) et relations d'associations (bâtiments, salles, créneaux, cours).
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Algorithme de Détection des Conflits Horaires :</strong> Développement d'un moteur d'ordonnancement vérifiant en amont la non-collision temporelle des réservations (même salle au même créneau, ou même enseignant/groupe sur deux cours simultanés).
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Architecture en Couches (Pattern MVC & DAO) :</strong> Séparation nette entre les interfaces graphiques (FXML / CSS), les contrôleurs d'événements, les services métier et la persistance relationnelle avec JDBC et SQL.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Supervision & Dataviz d'Occupation :</strong> Conception de tableaux de bord analytiques calculant le taux d'occupation des 38 salles (amphithéâtres, salles de TD, laboratoires informatiques) et export des synthèses d'activité.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Ce que j'en ai appris (Compétences & Retours d'expérience) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-brain text-blue'></i> Ce que j'en ai appris & Compétences Renforcées
+                    </h3>
+                    <div class="modal-skills-grid">
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-java'></i> Programmation Orientée Objet (POO)
+                            </div>
+                            <p>Approfondissement concret des piliers de la POO : encapsulation des entités métier, héritage, polymorphisme, interfaces et gestion des collections Java avancées.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-git-repo-forked'></i> Conception & Design Patterns
+                            </div>
+                            <p>Mise en pratique du pattern MVC (Modèle-Vue-Contrôleur) avec FXML / SceneBuilder et du pattern DAO (Data Access Object) pour une isolation totale de la base de données.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-check-shield'></i> Gestion de la Cohérence & Conflits
+                            </div>
+                            <p>Conception d'algorithmes de validation pour éliminer les incohérences d'emploi du temps, sécurisation des transactions SQL et gestion des droits selon le profil connecté.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-desktop'></i> IHM Desktop & Dataviz Moderne
+                            </div>
+                            <p>Création d'interfaces utilisateur modernes et réactives sous JavaFX avec styles CSS personnalisés, indicateurs visuels de charge et navigation multi-vues intuitive.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Stack Technique -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-code-alt text-blue'></i> Technologies & Outils
+                    </h3>
+                    <div class="modal-tech-tags">
+                        <span class="modal-tech-tag"><i class='bx bxl-java'></i> Java 17 / 21</span>
+                        <span class="modal-tech-tag"><i class='bx bx-layout'></i> JavaFX & FXML</span>
+                        <span class="modal-tech-tag"><i class='bx bx-paint'></i> SceneBuilder & CSS</span>
+                        <span class="modal-tech-tag"><i class='bx bx-data'></i> SQL / Base relationnelle</span>
+                        <span class="modal-tech-tag"><i class='bx bx-server'></i> JDBC & Pattern DAO</span>
+                        <span class="modal-tech-tag"><i class='bx bx-sitemap'></i> Modélisation UML (MCD / Classes)</span>
+                        <span class="modal-tech-tag"><i class='bx bx-line-chart'></i> Dataviz & Chart.js</span>
+                        <span class="modal-tech-tag"><i class='bx bxl-git'></i> Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pied de la modale avec actions -->
+            <div class="project-modal-footer">
+                <button type="button" class="btn btn-secondary" id="modalUnivSchedulerDismissBtn">
+                    <i class='bx bx-x'></i> Fermer
+                </button>
+                <a href="#contact" class="btn btn-primary" id="modalUnivSchedulerContactActionBtn">
+                    <i class='bx bx-envelope'></i> Échanger sur ce projet
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Remonter en haut">
         <i class='bx bx-chevron-up'></i>
@@ -1170,6 +1986,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./script.js?v=2.6"></script>
+    <script src="./script.js?v=2.9"></script>
 </body>
 </html>
