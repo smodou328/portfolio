@@ -2301,8 +2301,36 @@ textarea.form-control {
         grid-template-columns: 1fr;
     }
 
+    .skills-category {
+        padding: 1.35rem 1.1rem;
+    }
+
+    .category-title {
+        font-size: 1.15rem;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .category-title i {
+        font-size: 1.3rem;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-category {
+        padding: 1.15rem 0.85rem;
+    }
+
+    .category-title {
+        font-size: 1.05rem;
+    }
+
+    .skill-item {
+        padding: 0.85rem 0.95rem;
     }
 }
