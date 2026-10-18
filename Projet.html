@@ -144,14 +144,14 @@
                     id="projectUnivSchedulerCard"
                     role="button"
                     tabindex="0"
-                    aria-label="Cliquer pour afficher les détails et les 4 captures du projet Gestion des Salles & Emplois du Temps"
+                    aria-label="Cliquer pour afficher les détails et les 3 captures du projet Gestion des Salles & Emplois du Temps"
                     data-project="univscheduler"
                     data-title="UNIV-SCHEDULER — Gestion des Salles & Emplois du Temps"
                     data-category="logiciel">
                     <div class="project-thumb-wrap">
-                        <img src="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" alt="UNIV-SCHEDULER — Gestion des Salles & Emplois du Temps" class="project-thumb-img" loading="lazy">
+                        <img src="./assets/projects/univ-scheduler/univ-scheduler-portal.png" alt="UNIV-SCHEDULER — Gestion des Salles & Emplois du Temps" class="project-thumb-img" loading="lazy">
                         <div class="project-thumb-overlay">
-                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 4 Captures • Cliquer</span>
+                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 3 Captures • Cliquer</span>
                         </div>
                     </div>
                     <div class="project-body">
@@ -175,27 +175,35 @@
                 </article>
 
                 <!-- Project 4: Gestion Bibliothèque -->
-                <article class="project-card">
-                    <div class="project-badge-top">
-                        <div class="project-badge-icon">
-                            <i class='bx bx-library'></i>
+                <article class="project-card clickable"
+                    id="projectBibliothequeCard"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Cliquer pour afficher les détails et les 4 captures du Système de Gestion de Prêts en Bibliothèque (MyBiblio)"
+                    data-project="bibliotheque"
+                    data-title="Système de Gestion de Prêts en Bibliothèque (MyBiblio) — Serigne Modou LO">
+                    <div class="project-thumb-wrap">
+                        <img src="./assets/projects/bibliotheque/mybiblio-hero.png" alt="Système de Gestion de Prêts en Bibliothèque — MyBiblio" class="project-thumb-img" loading="lazy">
+                        <div class="project-thumb-overlay">
+                            <span class="project-thumb-badge"><i class='bx bx-images'></i> 4 Captures • Cliquer</span>
                         </div>
                     </div>
                     <div class="project-body">
                         <div class="project-tags">
-                            <span class="project-tag">Apps Script</span>
+                            <span class="project-tag">Google Sites</span>
+                            <span class="project-tag">Google Apps Script</span>
+                            <span class="project-tag">Google Forms & Sheets</span>
                             <span class="project-tag">Langage C</span>
-                            <span class="project-tag">Automatisation</span>
                         </div>
-                        <h3 class="project-title">Système de Gestion de Prêts en Bibliothèque</h3>
+                        <h3 class="project-title">Système de Gestion de Prêts en Bibliothèque (MyBiblio)</h3>
                         <p class="project-desc">
-                            Conception d'une application de gestion des prêts et retours d'ouvrages avec Google Forms, Google Sheets et Google Apps Script, combinée à une modélisation algorithmique en Langage C.
+                            Portail web et solution d'automatisation des prêts et retours d'ouvrages universitaires via Google Sites, Forms, Sheets et Apps Script, combinée à une modélisation en Langage C.
                         </p>
                         <div class="project-footer">
-                            <a href="./Contact.html" class="project-link">
-                                Demander des détails <i class='bx bx-right-arrow-alt'></i>
-                            </a>
-                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-light);">Projet Académique</span>
+                            <button type="button" class="project-link open-bibliotheque-modal" style="background:none; border:none; padding:0; cursor:pointer;" aria-label="Ouvrir la fenêtre détaillée de la Gestion de Prêts en Bibliothèque">
+                                Voir les détails & captures <i class='bx bx-expand-alt'></i>
+                            </button>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary);">Projet Académique</span>
                         </div>
                     </div>
                 </article>
@@ -941,25 +949,22 @@
             <!-- Galerie d'images 16:9 avec aperçu principal et miniatures -->
             <div class="project-modal-gallery">
                 <div class="modal-gallery-main-wrap">
-                    <img id="modalUnivSchedulerViewerImg" src="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" alt="Tableau de bord UNIV-SCHEDULER" class="modal-gallery-main-img">
+                    <img id="modalUnivSchedulerViewerImg" src="./assets/projects/univ-scheduler/univ-scheduler-portal.png" alt="Portail d'Accueil UNIV-SCHEDULER" class="modal-gallery-main-img">
                     <div class="modal-gallery-caption" id="modalUnivSchedulerViewerCaption">
-                        <i class='bx bx-image'></i> <span>Tableau de Bord Gestionnaire — KPIs d'occupation des 38 salles, jauges circulaires, répartition des cours & analyse IA</span>
+                        <i class='bx bx-image'></i> <span>Portail d'Accueil & Rôles — Interface de bienvenue et sélection des profils (Administrateur, Gestionnaire, Enseignant, Étudiant)</span>
                     </div>
                 </div>
 
-                <!-- 4 Miniatures sélectionnables -->
+                <!-- 3 Miniatures sélectionnables -->
                 <div class="modal-gallery-thumbs" id="modalUnivSchedulerThumbs">
-                    <button type="button" class="modal-thumb-btn active" data-img="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" data-caption="Tableau de Bord Gestionnaire — KPIs d'occupation des 38 salles, jauges circulaires, répartition des cours & analyse IA" title="Tableau de Bord & KPIs">
+                    <button type="button" class="modal-thumb-btn active" data-img="./assets/projects/univ-scheduler/univ-scheduler-portal.png" data-caption="Portail d'Accueil & Rôles — Interface de bienvenue et sélection des profils (Administrateur, Gestionnaire, Enseignant, Étudiant)" title="Portail & Sélection des Rôles">
+                        <img src="./assets/projects/univ-scheduler/univ-scheduler-portal.png" alt="Portail d'Accueil UNIV-SCHEDULER">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/univ-scheduler/univ-scheduler-login.png" data-caption="Authentification Sécurisée — Connexion à l'Espace Administrateur avec validation des identifiants et accès protégé" title="Connexion Administrateur">
+                        <img src="./assets/projects/univ-scheduler/univ-scheduler-login.png" alt="Connexion Administrateur">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" data-caption="Tableau de Bord Gestionnaire — KPIs d'occupation des 38 salles, jauges circulaires, répartition des cours & analyse IA" title="Tableau de Bord & KPIs">
                         <img src="./assets/projects/univ-scheduler/univ-scheduler-dashboard.png" alt="Dashboard UNIV-SCHEDULER">
-                    </button>
-                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/univ-scheduler/univ-scheduler-edt.png" data-caption="Planification des Séances & Détection de Conflits — Attribution intelligente des créneaux horaires, suivi de statut et vérification d'indisponibilité" title="Emploi du Temps & Conflits">
-                        <img src="./assets/projects/univ-scheduler/univ-scheduler-edt.png" alt="Planification des Cours">
-                    </button>
-                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/univ-scheduler/univ-scheduler-portal.png" data-caption="Portail d'Accès Multi-Acteurs — Authentification sécurisée et espaces personnalisés pour Administrateur, Gestionnaire EDT, Enseignant et Étudiant" title="Portail Multi-Rôles">
-                        <img src="./assets/projects/univ-scheduler/univ-scheduler-portal.png" alt="Portail Multi-Acteurs">
-                    </button>
-                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/univ-scheduler/univ-scheduler-architecture.png" data-caption="Modélisation Orientée Objet (POO) — Diagramme de classes UML complet : hiérarchie d'héritage Utilisateur, classes métier, DAO et services" title="Architecture UML & POO">
-                        <img src="./assets/projects/univ-scheduler/univ-scheduler-architecture.png" alt="Architecture UML Classes">
                     </button>
                 </div>
             </div>
@@ -1070,6 +1075,161 @@
         </div>
     </div>
 
+    <!-- ========================================================
+         MODAL INTERACTIVE: GESTION DE PRÊTS EN BIBLIOTHÈQUE
+         ======================================================== -->
+    <div class="project-modal-backdrop" id="bibliothequeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalBibliothequeTitle">
+        <div class="project-modal-dialog">
+            <!-- Bouton Fermeture -->
+            <button type="button" class="project-modal-close" id="modalBibliothequeCloseBtn" aria-label="Fermer la fenêtre modale">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <!-- En-tête de la modale -->
+            <div class="project-modal-header">
+                <div class="project-modal-badge">
+                    <i class='bx bx-library'></i> Google Sites • Google Apps Script • Google Workspace • Langage C
+                </div>
+                <h2 class="project-modal-title" id="modalBibliothequeTitle">
+                    Système de Gestion de Prêts en Bibliothèque (MyBiblio)
+                </h2>
+                <p class="project-modal-subtitle">
+                    Solution logicielle de gestion documentaire et d'automatisation des prêts et retours d'ouvrages : portail web MyBiblio, espace abonné interactif, suivi des emprunteurs, rappels automatiques et modélisation algorithmique en Langage C.
+                </p>
+            </div>
+
+            <!-- Galerie d'images 16:9 avec aperçu principal et miniatures -->
+            <div class="project-modal-gallery">
+                <div class="modal-gallery-main-wrap">
+                    <img id="modalBibliothequeViewerImg" src="./assets/projects/bibliotheque/mybiblio-hero.png" alt="Portail Web MyBiblio" class="modal-gallery-main-img">
+                    <div class="modal-gallery-caption" id="modalBibliothequeViewerCaption">
+                        <i class='bx bx-image'></i> <span>Portail Web MyBiblio — Page d'Accueil : « Explorez, Empruntez, Apprenez », catalogue des fonds et accès en ligne</span>
+                    </div>
+                </div>
+
+                <!-- 4 Miniatures sélectionnables -->
+                <div class="modal-gallery-thumbs" id="modalBibliothequeThumbs">
+                    <button type="button" class="modal-thumb-btn active" data-img="./assets/projects/bibliotheque/mybiblio-hero.png" data-caption="Portail Web MyBiblio — Page d'Accueil : « Explorez, Empruntez, Apprenez », catalogue des fonds et accès en ligne" title="Accueil MyBiblio">
+                        <img src="./assets/projects/bibliotheque/mybiblio-hero.png" alt="Accueil MyBiblio">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/bibliotheque/mybiblio-abonne-header.png" data-caption="Mon Espace Abonné (En-tête) — Suivi des emprunts en cours, profil usager et réservations d'événements" title="Espace Abonné">
+                        <img src="./assets/projects/bibliotheque/mybiblio-abonne-header.png" alt="Bannière Espace Abonné">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/bibliotheque/mybiblio-espace-abonne.png" data-caption="Mon Espace Abonné (Services) — Authentification par identifiant usager, consultation des livres disponibles et réclamations" title="Identification & Services">
+                        <img src="./assets/projects/bibliotheque/mybiblio-espace-abonne.png" alt="Connexion et Services Abonné">
+                    </button>
+                    <button type="button" class="modal-thumb-btn" data-img="./assets/projects/bibliotheque/mybiblio-apropos-evenements.png" data-caption="À Propos & Nos Événements — Mission culturelle de MyBiblio, rencontres avec des auteurs, clubs de lecture et webinaires" title="À Propos & Événements">
+                        <img src="./assets/projects/bibliotheque/mybiblio-apropos-evenements.png" alt="À Propos et Événements">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Corps détaillé du projet -->
+            <div class="project-modal-body">
+                <!-- 1. Ce que j'ai réalisé (Mon Rôle & Tâches) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-briefcase text-blue'></i> Mon Rôle & Ce que j'ai réalisé
+                    </h3>
+                    <div class="modal-detail-text">
+                        <p>
+                            Dans le cadre de ce projet de gestion documentaire et d'automatisation, j'ai conçu et mis en œuvre une solution hybride combinant la flexibilité du cloud <strong>Google Workspace (Apps Script, Forms, Sheets)</strong> et la rigueur algorithmique du <strong>Langage C</strong> :
+                        </p>
+                        <ul class="modal-tasks-list">
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Automatisation des Prêts & Retours (Google Apps Script) :</strong> Développement de scripts serveurs automatisant le cycle de vie du prêt à chaque soumission de formulaire (attribution d'un identifiant de transaction unique, décrémentation des exemplaires disponibles et archivage horodaté).
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Système de Relance & Notifications Automatiques :</strong> Configuration d'un trigger temporel (Time-Driven Trigger) qui analyse quotidiennement les dates d'échéance et envoie automatiquement des alertes par courriel aux emprunteurs en retard de restitution.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Modélisation Algorithmique en Langage C :</strong> Développement d'un noyau applicatif en C modélisant les opérations de base de la bibliothèque : structures de données pour les livres et les abonnés, allocation dynamique de mémoire, et recherche optimisée par ISBN/titre.
+                                </div>
+                            </li>
+                            <li>
+                                <i class='bx bx-check-circle'></i>
+                                <div>
+                                    <strong>Tableaux de Bord de Suivi & Gestion des Stocks :</strong> Mise en place de formules avancées et de règles de validation sur Google Sheets avec indicateurs visuels (livres les plus empruntés, taux de rotation des fonds, pénalités de retard).
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Ce que j'en ai appris (Compétences & Retours d'expérience) -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-brain text-blue'></i> Ce que j'en ai appris & Compétences Renforcées
+                    </h3>
+                    <div class="modal-skills-grid">
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bxl-javascript'></i> Google Apps Script & Automatisation
+                            </div>
+                            <p>Développement de solutions d'automatisation bureautique serverless, manipulation des objets SpreadsheetApp, FormApp et MailApp, et gestion fine des événements déclencheurs.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-code-block'></i> Rigueur Algorithmique & Langage C
+                            </div>
+                            <p>Gestion manuelle de la mémoire (malloc/free), manipulation de pointeurs, gestion des fichiers structurés et implémentation de listes pour gérer des collections dynamiques d'ouvrages.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-sitemap'></i> Gestion des Processus Métier & Flux
+                            </div>
+                            <p>Analyse des règles de gestion d'un fonds documentaire universitaire : quotas d'emprunt selon le profil (étudiant/enseignant), périodes de prêt, et politique de pénalités.</p>
+                        </div>
+
+                        <div class="modal-skill-item">
+                            <div class="modal-skill-header">
+                                <i class='bx bx-layer'></i> Hybridation Outils Cloud & Modélisation
+                            </div>
+                            <p>Capacité à concevoir des solutions opérationnelles rapides et sans friction en couplant des outils collaboratifs modernes (Google Cloud) à des bases de génie logiciel classiques.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Stack Technique -->
+                <div class="modal-detail-block">
+                    <h3 class="modal-detail-title">
+                        <i class='bx bx-code-alt text-blue'></i> Technologies & Outils
+                    </h3>
+                    <div class="modal-tech-tags">
+                        <span class="modal-tech-tag"><i class='bx bxl-javascript'></i> Google Apps Script</span>
+                        <span class="modal-tech-tag"><i class='bx bx-table'></i> Google Sheets API</span>
+                        <span class="modal-tech-tag"><i class='bx bx-file'></i> Google Forms</span>
+                        <span class="modal-tech-tag"><i class='bx bx-terminal'></i> Langage C (Algorithmes & Structures)</span>
+                        <span class="modal-tech-tag"><i class='bx bx-envelope'></i> Triggers Automatiques & MailApp</span>
+                        <span class="modal-tech-tag"><i class='bx bx-globe'></i> Google Sites</span>
+                        <span class="modal-tech-tag"><i class='bx bx-data'></i> Modélisation Données & Inventaire</span>
+                        <span class="modal-tech-tag"><i class='bx bx-check-shield'></i> Gestion des Droits & Quotas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pied de la modale avec actions -->
+            <div class="project-modal-footer">
+                <button type="button" class="btn btn-secondary" id="modalBibliothequeDismissBtn">
+                    <i class='bx bx-x'></i> Fermer
+                </button>
+                <a href="./Contact.html" class="btn btn-primary" id="modalBibliothequeContactActionBtn">
+                    <i class='bx bx-envelope'></i> Échanger sur ce projet
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
@@ -1086,6 +1246,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./script.js?v=2.9"></script>
+    <script src="./script.js?v=3.3"></script>
 </body>
 </html>

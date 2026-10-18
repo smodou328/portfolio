@@ -993,6 +993,99 @@ document.addEventListener('DOMContentLoaded', () => {
             thumb.classList.add('active');
         });
     });
+
+    // 12. Modale Interactive Projet Gestion de Prêts en Bibliothèque
+    const bibliothequeCard = document.getElementById('projectBibliothequeCard');
+    const bibliothequeModal = document.getElementById('bibliothequeModal');
+    const modalBibliothequeCloseBtn = document.getElementById('modalBibliothequeCloseBtn');
+    const modalBibliothequeDismissBtn = document.getElementById('modalBibliothequeDismissBtn');
+    const modalBibliothequeContactActionBtn = document.getElementById('modalBibliothequeContactActionBtn');
+    const openBibliothequeBtns = document.querySelectorAll('.open-bibliotheque-modal');
+
+    function openBibliothequeModal() {
+        if (!bibliothequeModal) return;
+        bibliothequeModal.classList.add('active');
+        bibliothequeModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeBibliothequeModal() {
+        if (!bibliothequeModal) return;
+        bibliothequeModal.classList.remove('active');
+        bibliothequeModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (bibliothequeCard) {
+        bibliothequeCard.addEventListener('click', () => {
+            openBibliothequeModal();
+        });
+        bibliothequeCard.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openBibliothequeModal();
+            }
+        });
+    }
+
+    openBibliothequeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            openBibliothequeModal();
+        });
+    });
+
+    if (modalBibliothequeCloseBtn) modalBibliothequeCloseBtn.addEventListener('click', closeBibliothequeModal);
+    if (modalBibliothequeDismissBtn) modalBibliothequeDismissBtn.addEventListener('click', closeBibliothequeModal);
+    if (modalBibliothequeContactActionBtn) {
+        modalBibliothequeContactActionBtn.addEventListener('click', () => {
+            closeBibliothequeModal();
+        });
+    }
+
+    // Fermeture par clic sur le backdrop
+    if (bibliothequeModal) {
+        bibliothequeModal.addEventListener('click', (e) => {
+            if (e.target === bibliothequeModal) {
+                closeBibliothequeModal();
+            }
+        });
+    }
+
+    // Fermeture par touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && bibliothequeModal && bibliothequeModal.classList.contains('active')) {
+            closeBibliothequeModal();
+        }
+    });
+
+    // Sélecteur de galerie d'images pour le projet Bibliothèque (4 miniatures)
+    const modalBibliothequeViewerImg = document.getElementById('modalBibliothequeViewerImg');
+    const modalBibliothequeViewerCaption = document.getElementById('modalBibliothequeViewerCaption');
+    const bibliothequeThumbBtns = document.querySelectorAll('#modalBibliothequeThumbs .modal-thumb-btn');
+
+    bibliothequeThumbBtns.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const imgSrc = thumb.getAttribute('data-img');
+            const caption = thumb.getAttribute('data-caption');
+
+            if (modalBibliothequeViewerImg && imgSrc) {
+                modalBibliothequeViewerImg.style.opacity = '0.35';
+                setTimeout(() => {
+                    modalBibliothequeViewerImg.src = imgSrc;
+                    modalBibliothequeViewerImg.style.opacity = '1';
+                }, 140);
+            }
+
+            if (modalBibliothequeViewerCaption && caption) {
+                modalBibliothequeViewerCaption.innerHTML = `<i class='bx bx-image'></i> <span>${caption}</span>`;
+            }
+
+            bibliothequeThumbBtns.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
 });
 
 
