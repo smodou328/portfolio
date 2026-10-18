@@ -18,6 +18,57 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkHeaderScroll);
     checkHeaderScroll();
 
+    // 1.1 Animation Typewriter interactive pour le titre du Hero
+    const heroTypewriter = document.getElementById('heroTypewriter');
+    if (heroTypewriter) {
+        const phrases = [
+            "Étudiant en Licence 3 Génie Logiciel & Développeur Web",
+            "Développeur Full-Stack (Laravel & React)",
+            "Stagiaire Développeur Web chez Écoles au Sénégal",
+            "Passionné par Django, Python & les APIs REST"
+        ];
+
+        let phraseIndex = 0;
+        let charIndex = phrases[0].length;
+        let isDeleting = true;
+        let typingSpeed = 50;
+
+        // Attente initiale de 2.6s pour laisser le temps de lire la phrase de départ
+        setTimeout(typeNextCharacter, 2600);
+
+        function typeNextCharacter() {
+            // Respect de l'accessibilité si réduction de mouvement activée
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                heroTypewriter.textContent = phrases[0];
+                return;
+            }
+
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                heroTypewriter.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 26; // Effacement fluide et rapide
+            } else {
+                heroTypewriter.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 50; // Frappe naturelle
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                // Pause après avoir tapé toute la phrase
+                typingSpeed = 2400;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typingSpeed = 400; // Courte pause avant de taper la suivante
+            }
+
+            setTimeout(typeNextCharacter, typingSpeed);
+        }
+    }
+
     // 2. Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobileToggle');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -515,22 +566,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Animation douce des barres de compétences
+    // 6. Animation douce des barres de compétences au scroll
     const progressBars = document.querySelectorAll('.skill-progress-bar');
-    if (progressBars.length > 0) {
-        const observer = new IntersectionObserver((entries) => {
+    if (progressBars.length > 0 && 'IntersectionObserver' in window) {
+        // Initialiser la largeur à 0% pour permettre l'animation progressive au scroll
+        progressBars.forEach(bar => {
+            bar.style.width = '0%';
+        });
+
+        const skillObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const bar = entry.target;
                     const percent = bar.getAttribute('data-percent');
                     if (percent) {
-                        bar.style.width = percent + '%';
+                        setTimeout(() => {
+                            bar.style.width = percent + '%';
+                        }, 120);
                     }
+                    observer.unobserve(bar);
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.15, rootMargin: '0px 0px -25px 0px' });
 
-        progressBars.forEach(bar => observer.observe(bar));
+        progressBars.forEach(bar => skillObserver.observe(bar));
     }
 
     // 7. Modale Interactive Projet CrousSpace (Galerie & Détails)
@@ -1086,6 +1145,175 @@ document.addEventListener('DOMContentLoaded', () => {
             thumb.classList.add('active');
         });
     });
+
+    // ==========================================================================
+    // 8. Animations Globales au Défilement (Scroll Reveal, Progression, Compteurs)
+    // ==========================================================================
+
+    // A. Barre de progression de lecture au scroll en haut de page
+    let scrollProgressIndicator = document.querySelector('.scroll-progress-indicator');
+    if (!scrollProgressIndicator) {
+        scrollProgressIndicator = document.createElement('div');
+        scrollProgressIndicator.className = 'scroll-progress-indicator';
+        document.body.prepend(scrollProgressIndicator);
+    }
+
+    function updateScrollProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (scrollHeight > 0) {
+            const progress = Math.min(100, Math.max(0, (scrollTop / scrollHeight) * 100));
+            scrollProgressIndicator.style.width = progress + '%';
+        }
+    }
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    updateScrollProgress();
+
+    // B. Bouton Retour en Haut universel pour toutes les pages
+    let floatingBackToTop = document.getElementById('backToTop');
+    if (!floatingBackToTop) {
+        floatingBackToTop = document.createElement('button');
+        floatingBackToTop.className = 'back-to-top';
+        floatingBackToTop.id = 'backToTop';
+        floatingBackToTop.setAttribute('aria-label', 'Remonter en haut');
+        floatingBackToTop.innerHTML = "<i class='bx bx-chevron-up'></i>";
+        document.body.appendChild(floatingBackToTop);
+        floatingBackToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    function handleBackToTopVisibility() {
+        if (floatingBackToTop) {
+            if (window.scrollY > 350) {
+                floatingBackToTop.classList.add('visible');
+            } else {
+                floatingBackToTop.classList.remove('visible');
+            }
+        }
+    }
+    window.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
+    handleBackToTopVisibility();
+
+    // C. Délai en cascade (Stagger effect) pour les cartes dans les grilles
+    const gridSelectors = [
+        '.projects-grid',
+        '.skills-grid',
+        '.certifications-grid',
+        '.services-grid',
+        '.about-stats-grid',
+        '.timeline-grid',
+        '.contact-methods'
+    ];
+
+    gridSelectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(grid => {
+            const items = Array.from(grid.children).filter(child => child.nodeType === 1);
+            items.forEach((item, idx) => {
+                if (!item.style.transitionDelay) {
+                    const delay = (idx % 4) * 85;
+                    item.style.transitionDelay = `${delay}ms`;
+                }
+            });
+        });
+    });
+
+    // D. Scroll Reveal : Apparition fluide des sections et cartes au scroll
+    const revealSelectors = [
+        '.section-header',
+        '.project-card',
+        '.skills-category',
+        '.cert-card',
+        '.service-card',
+        '.stat-box',
+        '.stat-card',
+        '.profile-card',
+        '.bio-card',
+        '.contact-card',
+        '.contact-form-wrap',
+        '.timeline-block',
+        '.timeline-card',
+        '.about-content-box'
+    ];
+
+    const revealElements = document.querySelectorAll(revealSelectors.join(', '));
+
+    if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+        revealElements.forEach(el => {
+            el.classList.add('reveal-on-scroll');
+
+            // Réinitialise transitionDelay à 0s après l'apparition pour préserver la réactivité du :hover
+            el.addEventListener('transitionend', (e) => {
+                if (e.propertyName === 'transform' || e.propertyName === 'opacity') {
+                    el.style.transitionDelay = '0s';
+                }
+            }, { once: true });
+
+            // Si déjà visible dans le viewport initial (chargement en haut de page)
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 30 && rect.bottom > 0) {
+                el.classList.add('is-revealed');
+            }
+        });
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -35px 0px'
+        });
+
+        revealElements.forEach(el => {
+            if (!el.classList.contains('is-revealed')) {
+                revealObserver.observe(el);
+            }
+        });
+    } else {
+        revealElements.forEach(el => el.classList.add('is-revealed'));
+    }
+
+    // E. Compteur animé pour les chiffres clés au scroll
+    const statCounters = document.querySelectorAll('.stat-number');
+    if (statCounters.length > 0 && 'IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const text = el.textContent.trim();
+                    const match = text.match(/^([^\d]*)(\d+)([^\d]*)$/);
+                    if (match) {
+                        const prefix = match[1] || '';
+                        const targetValue = parseInt(match[2], 10);
+                        const suffix = match[3] || '';
+                        const duration = 1200;
+                        const startTime = performance.now();
+
+                        function animateValue(now) {
+                            const elapsed = now - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const easedProgress = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.floor(easedProgress * targetValue);
+                            el.textContent = `${prefix}${current}${suffix}`;
+                            if (progress < 1) {
+                                requestAnimationFrame(animateValue);
+                            } else {
+                                el.textContent = text;
+                            }
+                        }
+                        requestAnimationFrame(animateValue);
+                    }
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        statCounters.forEach(counter => counterObserver.observe(counter));
+    }
 });
 
 

@@ -392,30 +392,98 @@ img {
     font-weight: 600;
     color: var(--text-muted);
     margin-bottom: 0.4rem;
+    animation: heroFadeDown 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: 2.7rem; /* Diminué de 3.4rem à 2.7rem */
+    font-size: 2.15rem;
     font-weight: 800;
-    color: var(--blue-primary);
-    line-height: 1.15;
+    line-height: 1.2;
     margin-bottom: 0.8rem;
     letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--blue-primary) 0%, #2563eb 35%, #0284c7 65%, var(--blue-primary) 100%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heroFadeRight 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both,
+               heroNameShine 6s linear infinite;
+    display: inline-block;
+}
+
+@keyframes heroNameShine {
+    to {
+        background-position: 250% center;
+    }
 }
 
 .hero-role {
-    font-size: 1.1rem; /* Diminué de 1.25rem à 1.1rem */
+    font-size: 1.1rem;
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 8px;
+    min-height: 1.6em;
+    animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
 }
 
 .hero-role i {
     color: var(--blue-primary);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.typewriter-text {
+    color: #0f172a;
+    display: inline;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    color: var(--blue-primary);
+    font-weight: 400;
+    margin-left: 2px;
+    animation: blinkCursor 0.85s infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes heroFadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroFadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-desc {
@@ -2112,6 +2180,131 @@ textarea.form-control {
     transform: translateY(-3px);
 }
 
+.back-to-top.visible {
+    animation: backToTopPulse 3s infinite ease-in-out;
+}
+
+@keyframes backToTopPulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 22px rgba(37, 99, 235, 0.65);
+    }
+}
+
+/* ==========================================================================
+   ANIMATIONS AU SCROLL (SCROLL REVEAL & PROGRESSION)
+   ========================================================================== */
+
+/* Barre de progression de lecture au scroll en haut de l'écran */
+.scroll-progress-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3.5px;
+    background: linear-gradient(90deg, var(--blue-primary) 0%, var(--blue-vibrant) 50%, #38bdf8 100%);
+    z-index: 999999;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+    pointer-events: none;
+}
+
+/* Base Scroll Reveal : Apparition fluide vers le haut avec fondu */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll:not(.is-revealed) {
+    pointer-events: none;
+}
+
+.reveal-on-scroll.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Variations directionnelles */
+.reveal-left {
+    transform: translateX(-35px);
+}
+.reveal-left.is-revealed {
+    transform: translateX(0);
+}
+
+.reveal-right {
+    transform: translateX(35px);
+}
+.reveal-right.is-revealed {
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    transform: translateY(20px) scale(0.95);
+}
+.reveal-scale.is-revealed {
+    transform: translateY(0) scale(1);
+}
+
+.reveal-fade {
+    transform: none;
+}
+.reveal-fade.is-revealed {
+    transform: none;
+}
+
+/* Transition de survol préservée sur les cartes révélées */
+.project-card, 
+.skills-category, 
+.cert-card, 
+.service-card, 
+.stat-card, 
+.timeline-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Accessibilité : désactivation propre si réduction de mouvement demandée */
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale,
+    .reveal-fade {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    .skill-progress-bar {
+        transition: none !important;
+    }
+    .scroll-progress-indicator {
+        display: none !important;
+    }
+    .back-to-top.visible {
+        animation: none !important;
+    }
+    .hero-content h3,
+    .hero-content h1,
+    .hero-role {
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    .typewriter-cursor {
+        animation: none !important;
+        opacity: 0 !important;
+    }
+}
+
 /* --- Footer --- */
 .footer {
     background: linear-gradient(135deg, #10213f 0%, #1e40af 100%);
@@ -2200,6 +2393,10 @@ textarea.form-control {
         order: 2;
     }
 
+    .hero-content h3 {
+        justify-content: center;
+    }
+
     .hero-visual {
         order: 1;
     }
@@ -2257,7 +2454,7 @@ textarea.form-control {
     }
 
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 1.75rem;
     }
 
     .section-title {
@@ -2322,6 +2519,10 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.55rem;
+    }
+
     .skills-category {
         padding: 1.15rem 0.85rem;
     }
