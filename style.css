@@ -200,6 +200,18 @@ img {
     padding: 0.55rem 1rem;
 }
 
+/* Pages internes : laisser la place sous la navbar fixe */
+.page-section {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .page-section {
+        padding-top: 6.5rem;
+    }
+}
+
 .nav-pill-container {
     width: 100%;
     max-width: 980px;
