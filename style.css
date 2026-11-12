@@ -867,7 +867,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0;
     gap: 0.75rem;
 }
 
